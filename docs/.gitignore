@@ -1,0 +1,13 @@
+# Backend files (development only)
+backend/
+node_modules/
+package-lock.json
+
+# IDE
+.vscode/
+.DS_Store
+*.swp
+
+# Environment
+.env
+.env.local
