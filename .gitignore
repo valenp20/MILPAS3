@@ -8,6 +8,7 @@ yarn.lock
 
 # Env files
 .env
+.env.local
 
 # Build outputs
 dist/
@@ -25,8 +26,13 @@ Thumbs.db
 logs/
 *.log
 
-# Banners folder (if images large)
-pagina/banners/
+# Backend (development only)
+backend/
+*/backend/
 
 # Backup folder used during repo initialization
 .git_backups/
+
+# IDEs
+*.swp
+*.swo
