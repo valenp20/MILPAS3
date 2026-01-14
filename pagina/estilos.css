@@ -155,7 +155,7 @@ a {
         justify-content: flex-start; /* alinear a la izquierda */
         padding-left: 25px; /* separación desde la margen izquierda */
     }
-    .logo img { display:block; margin:0 auto; }
+    .logo img { display:block; margin:0 auto; width: 190px; height: 160px; }
 }
 
 /* Forzar en móvil: logo encima de la navegación y barra estirada */
