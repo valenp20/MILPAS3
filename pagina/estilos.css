@@ -544,11 +544,11 @@ img{
 
 /* Mobile: aumentar logo en pantallas pequeñas */
 @media (max-width: 600px) {
-    .logo img { max-height: 210px; width: auto; height: auto; }
+    .logo img { width: 190px; height: 160px; max-width: 100%; }
 }
 @media (max-width: 433px) {
     .logo { width: 310px; }
-    .logo img { max-height: 220px; width: auto; height: auto; }
+    .logo img { width: 190px; height: 160px; max-width: 100%; }
 }
 
 /* Footer */
