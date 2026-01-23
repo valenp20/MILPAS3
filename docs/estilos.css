@@ -354,12 +354,12 @@ a {
     background: linear-gradient(135deg, #0b63b8 0%, #084a8c 100%);
     color: #fff;
     min-width: 240px;
-    max-height: 280px;
+    max-height: calc(100vh - 150px);
     overflow-y: auto;
     border-radius: 8px;
     box-shadow: 0 12px 30px rgba(0,0,0,0.2);
     padding: 8px 4px;
-    z-index: 1000;
+    z-index: 1600;
     border: 2px solid #f38405;
     animation: slideDown 0.3s ease;
 }
