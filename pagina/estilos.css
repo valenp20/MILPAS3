@@ -3,6 +3,7 @@ body {
     font-family: 'Libre Baskerville', 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
     margin: 0; 
     padding: 0;
+    padding-bottom: var(--footer-height);
     background-color: #fafafa;
     color: #333;
 } 
@@ -24,6 +25,8 @@ a {
     background-color: #f38405;
     border-bottom: 1px solid #ddd;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 /* Barra superior de contacto eliminada - reglas removidas */
@@ -161,16 +164,16 @@ a {
 /* Forzar en móvil: logo encima de la navegación y barra estirada */
 @media (max-width: 433px) {
     .header-main { display:flex; flex-direction:column; align-items:stretch; position:relative; }
-    .logo { order:1; width: 240px; display:flex; justify-content:center; margin-bottom:10px; position:relative; z-index: 4000; }
-    .logo img { display:block; margin:0 auto; max-width: 100%; height: auto; }
+    .logo { order:1; width: 240px; display:flex; justify-content:center; margin-bottom:0px; position:relative; z-index: 4000; }
+    .logo img { display:block; margin:0 auto; width: 80px; height: 60px; }
     .search-bar { order:2; width: calc(100% - 30px); margin: 0 15px; padding:8px 8px; box-sizing:border-box; background:#fff; }
     .main-nav {
-        margin-top: 8px;
+        margin-top: 0px;
         position: relative;
         z-index: 10;
         display: flex;
         align-items: center;
-        height: 44px; /* barra compacta en móvil */
+        height: 32px; /* barra más compacta en móvil */
         padding: 0;
         background-color: #0b63b8;
         box-shadow: none;
@@ -216,6 +219,12 @@ a {
     padding: 3px 4px;
     margin-left: 3px;
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-bar button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(255, 210, 59, 0.4);
 }
 
 
@@ -229,7 +238,14 @@ a {
     border-radius: 6px;
     cursor: pointer;
     font-weight: 700;
-    font-size: 0.8em; 
+    font-size: 0.8em;
+    transition: all 0.3s ease;
+}
+
+.home-button button:hover, #home-btn:hover {
+    background: #d86700;
+    transform: scale(1.08);
+    box-shadow: 0 4px 12px rgba(243, 132, 5, 0.3);
 }
 
 /* admin panel styles removed */
@@ -241,7 +257,7 @@ a {
 .main-nav {
     background-color: #0b63b8;
     border-bottom: none;
-    padding: 6px 0;
+    padding: 3px 0;
     box-shadow: inset 0 -3px 0 rgba(0,0,0,0.06);
 }
 
@@ -294,8 +310,22 @@ a {
 .side-header { display:flex; align-items:center; gap:8px; padding:12px 16px; border-bottom:1px solid #eee; }
 .side-close { margin-left:auto; background:transparent; border:none; font-size:1.2rem; cursor:pointer; }
 .side-nav { padding: 12px; display:flex; flex-direction:column; gap:8px; }
-.side-nav a, .side-nav button { display:block; padding:10px 12px; border-radius:6px; text-align:left; background:transparent; border:none; color:#333; cursor:pointer; font-weight:600; }
-.side-nav a:hover, .side-nav button:hover { background: #f7f7f7; }
+.side-nav a, .side-nav button { 
+    display:block; 
+    padding:10px 12px; 
+    border-radius:6px; 
+    text-align:left; 
+    background:transparent; 
+    border:none; 
+    color:#333; 
+    cursor:pointer; 
+    font-weight:600;
+    transition: all 0.3s ease;
+}
+.side-nav a:hover, .side-nav button:hover { 
+    background: #f7f7f7;
+    padding-left: 16px;
+}
 
 /* overlay para cerrar al hacer click fuera */
 .side-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.3); z-index: 2100; display:none; }
@@ -306,9 +336,15 @@ a {
     color: #fff;
     padding: 8px 14px;
     border-radius: 4px;
+    transition: all 0.3s ease;
 }
-.nav-links li a:hover{ background: rgba(255,255,255,0.06); }
-.nav-links li a.active{ background: rgba(255,255,255,0.12); }
+.nav-links li a:hover{ 
+    background: rgba(255,255,255,0.12);
+    transform: translateY(-1px);
+}
+.nav-links li a.active{ 
+    background: rgba(255,255,255,0.12);
+}
 
 /* Products submenu styles */
 .products-parent { position: relative; }
@@ -317,19 +353,39 @@ a {
     position: absolute;
     top: calc(100% + 6px);
     left: 0;
-    background: #0b63b8;
-    color: #222;
-    min-width: 220px;
-    border-radius: 6px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-    padding: 8px 6px;
-    z-index: 3000;
+    background: linear-gradient(135deg, #0b63b8 0%, #084a8c 100%);
+    color: #fff;
+    min-width: 240px;
+    max-height: 280px;
+    overflow-y: auto;
+    border-radius: 8px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+    padding: 8px 4px;
+    z-index: 1000;
+    border: 2px solid #f38405;
+    animation: slideDown 0.3s ease;
+}
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 .products-submenu.open,
 .products-parent:hover .products-submenu { display: block; }
 .products-submenu li { list-style: none; }
-.products-submenu li a { display: block; padding: 8px 12px; color: #222; border-radius:4px; }
-.products-submenu li a:hover { background: #f2f2f2; }
+.products-submenu li a { 
+    display: block; 
+    padding: 10px 14px; 
+    color: #fff; 
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.95em;
+    transition: all 0.2s ease;
+}
+.products-submenu li a:hover { 
+    background: #f38405;
+    color: #fff;
+    padding-left: 20px;
+}
 
 /* Mobile behavior: show submenu inside collapsed nav */
 @media (max-width: 800px) {
@@ -380,13 +436,10 @@ a {
     text-shadow: 0 2px 6px rgba(0,0,0,0.6);
 }
 /* Ajustes concretos para elementos del hero para mejorar legibilidad */
-.hero-inner h1, .hero-inner p, .hero-inner .cta{ text-shadow: 0 2px 6px rgba(0,0,0,0.65); }
-.hero-inner .cta{ /* pequeño realce para el botón */
-    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-}
+.hero-inner h1, .hero-inner p{ text-shadow: 0 2px 6px rgba(0,0,0,0.65); }
 .hero-inner h1{ font-size:48px; line-height:1; margin:0 0 8px; font-weight:700; letter-spacing:0.5px; }
 .hero-inner p{ margin:0 0 16px; font-size:18px; opacity:0.95; }
-.hero-inner .cta{ background:#0b63b8; color:#fff; padding:10px 18px; border-radius:6px; font-weight:700; text-decoration:none; }
+
 
 @media (max-width: 900px){
     /* On mobile provide a smaller minimum hero height while script adapts */
@@ -460,38 +513,26 @@ img{
     border-radius: 10px;
     overflow: hidden;
     min-width: 140px; 
-    flex: 0 0 auto; 
+    flex: 0 0 auto;
+    transition: all 0.3s ease;
 }
 
 .producto img {
     width: 100%;
     height: 120px; 
     object-fit: cover;
-    border-radius: 10px 
-10px 0 0;
-    transition: all 0.5s;
+    border-radius: 10px 10px 0 0;
+    transition: all 0.5s ease;
 }
 
 .producto:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
     overflow: hidden;
+    transform: translateY(-4px);
 }
 
-    .producto:hover img {
-        transform: scale(1.1); 
-        transition: all 0.5s;
-        overflow: hidden;
-    }
-.discount-badge {
-    position: absolute;
-    top: 5px; 
-    left: 5px;
-    background-color: #dc3545;
-    color: #fff;
-    padding: 3px 6px; 
-    border-radius: 4px;
-    font-size: 0.7em; 
-    z-index: 20;
+.producto:hover img {
+    transform: scale(1.1);
 }
 
 .btn-secondary {
@@ -558,7 +599,7 @@ img{
     padding: 5px 5%;
     text-align: center;
     height: var(--footer-height); 
-    position: static; 
+    position: fixed; 
     left: 0;
     right: 0;
     bottom: 0;

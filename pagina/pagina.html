@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <title>Mi Página</title>
    
-    <link rel="stylesheet" href="estilos.css"> 
+    <link rel="stylesheet" href="estilos.css?v=6.0"> 
     <style>
     /* Forzar +10px al logo en móviles (pagina/pagina.html usa ../docs/logo.png 200x150) */
     @media (max-width: 600px) {
@@ -27,7 +27,7 @@
     <header class="main-header">
         <div class="header-main">
             <div class="logo">
-                <a href="#"><img src="../docs/logo.png" width="200" height="150" alt="Logo"></a>
+                <a href="#"><img src="/docs/logo.png" width="200" height="150" alt="Logo"></a>
             </div>
            
             <div class="search-bar">
@@ -46,14 +46,23 @@
                 <a href="#" id="products-link">NUESTROS PRODUCTOS ▾</a>
                 <ul class="products-submenu" aria-hidden="true">
                     <li><a href="#" data-category="Lácteos">LACTEOS</a></li>
-                    <li><a href="#" data-category="Frutas">FRUTAS Y VERDURAS</a></li>
-                    <li><a href="#" data-category="Carnes">CARNES</a></li>
-                    <li><a href="#" data-category="Aseo">ASEO</a></li>
+                    <li><a href="#" data-category="Frutos Secos">FRUTOS SECOS</a></li>
+                    <li><a href="#" data-category="Panaderia">PANADERIA</a></li>
+                    <li><a href="#" data-category="Limpieza">LIMPIEZA</a></li>
                     <li><a href="#" data-category="Hogar">HOGAR</a></li>
-                    <li><a href="#" data-category="Despensa">DESPENSA</a></li>
-                </ul>
+                    <li><a href="#" data-category="Dulces y postres">DULCES Y POSTRES</a></li>
+                <li><a href="#" data-category="Aseo personal">ASEO PERSONAL</a></li>
+                <li><a href="#" data-category="Aceites y untabñles">ACEITES Y UNTABLES</a></li>
+                <li><a href="#" data-category="Bebidas">BEBIDAS</a></li>
+                <li><a href="#" data-category="Condimentos">CONDIMENTOS</a></li>
+                <li><a href="#" data-category="Enlatados">ENLATADOS</a></li>
+              
+                <li><a href="#" data-category="Granos y cereales">GRANOS Y CEREALES</a></li>
             </li>
             <li><a href="#contacto" data-category="Contact">CONTACTANOS</a></li>
+            <li style="border-top: 1px solid #ddd; padding-top: 10px; margin-top: 10px;">
+                <a href="/admin" style="color: #f38405; font-weight: bold;">🛠️ PANEL ADMIN</a>
+            </li>
         </ul>
     </nav>
 
@@ -67,7 +76,6 @@
             <div class="hero-inner">
                 <h1>VEGETALES<br>SIEMPRE FRESCOS</h1>
                 <p>TENEMOS EL MEJOR SURTIDO DE VEGETALES FRESCOS PARA USTED</p>
-                <a class="cta" href="#">COMPRA AHORA!</a>
             </div>
         </section>
     </section>
@@ -188,9 +196,7 @@
                 const container = document.getElementById('product-carousel');
                 container.innerHTML = '';
                 
-                const isHome = (window.isHomeMode === undefined) ? true : !!window.isHomeMode;
-                const toRender = isHome ? products.filter(p => !p.discount || Number(p.discount) <= 0) : products;
-                toRender.forEach(p => {
+                products.forEach(p => {
                     const div = document.createElement('div');
                     div.className = 'producto';
 
@@ -200,17 +206,10 @@
                     img.width = 50;
                     img.height = 50;
 
-                    const badge = document.createElement('div');
-                    badge.className = 'discount-badge';
-                    if (p.discount) badge.textContent = `-${p.discount}%`;
-                    else if (p.weeklyOffer) badge.textContent = 'Oferta semanal';
-                    else badge.textContent = '';
-
                     const h3 = document.createElement('h3');
                     h3.textContent = String(p.name).replace(/\s*&\s*/g, ' y ');
 
                     div.appendChild(img);
-                    if (p.discount) div.appendChild(badge);
                     div.appendChild(h3);
 
                         container.appendChild(div);
@@ -222,7 +221,7 @@
             }
         }
 
-        document.addEventListener('DOMContentLoaded', loadProducts);
+        // document.addEventListener('DOMContentLoaded', loadProducts);
     </script>
     <script>
         (function(){
@@ -234,12 +233,14 @@
                 e.preventDefault();
                 const open = prodSub.classList.toggle('open');
                 prodSub.setAttribute('aria-hidden', String(!open));
+                document.documentElement.style.overflow = open ? 'hidden' : '';
             });
 
             document.addEventListener('click', (ev)=>{
                 if (!prodSub.contains(ev.target) && ev.target !== prodLink) {
                     prodSub.classList.remove('open');
                     prodSub.setAttribute('aria-hidden','true');
+                    document.documentElement.style.overflow = '';
                 }
             });
 
@@ -247,6 +248,7 @@
             subLinks.forEach(s=>{
                 s.addEventListener('click', ()=>{
                     prodSub.classList.remove('open'); prodSub.setAttribute('aria-hidden','true');
+                    document.documentElement.style.overflow = '';
                     const navLinks = document.getElementById('nav-links');
                     if (navLinks && navLinks.classList.contains('open')) navLinks.classList.remove('open');
                 });
@@ -319,17 +321,10 @@
                         img.width = 50;
                         img.height = 50;
 
-                        const badge = document.createElement('div');
-                        badge.className = 'discount-badge';
-                        if (p.discount) badge.textContent = `-${p.discount}%`;
-                        else if (p.weeklyOffer) badge.textContent = 'Oferta semanal';
-                        else badge.textContent = '';
-
                         const h3 = document.createElement('h3');
                         h3.textContent = String(p.name).replace(/\s*&\s*/g, ' y ');
 
                         div.appendChild(img);
-                        if (p.discount) div.appendChild(badge);
                         div.appendChild(h3);
 
                         container.appendChild(div);
@@ -350,14 +345,19 @@
                 }
 
                 function showCategory(cat){
-                  
-                    if (!cat || cat === 'All') { renderProducts(allProducts); return; }
-                    if (cat === 'Ofertas'){
-                       
-                        const filtered = allProducts.filter(p => p.weeklyOffer === true);
-                        renderProducts(filtered);
-                        return;
+                    const titleEl = document.getElementById('category-title');
+                    if (!cat || cat === 'All') { 
+                        renderProducts(allProducts);
+                        if (titleEl) titleEl.style.display = 'none';
+                        return; 
                     }
+                    
+                    // Mostrar el título de la categoría
+                    if (titleEl) {
+                        titleEl.textContent = cat.toUpperCase();
+                        titleEl.style.display = 'block';
+                    }
+                    
                     const filtered = allProducts.filter(p => String(p.category).toLowerCase() === String(cat).toLowerCase());
                     renderProducts(filtered);
                 }

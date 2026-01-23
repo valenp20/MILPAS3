@@ -6,8 +6,8 @@ const fs = require('fs');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Servir archivos estáticos desde la carpeta padre (raíz del proyecto)
-const staticRoot = path.join(__dirname, '..');
+// Servir archivos estáticos desde la raíz del proyecto (MILPAS3)
+const staticRoot = path.join(__dirname, '../..');
 
 app.use(cors());
 app.use(express.json());
@@ -52,7 +52,7 @@ app.get('/api/products/:id', (req, res) => {
 // Agregar un nuevo producto (se guarda en backend/data/products.json)
 app.post('/api/products', (req, res) => {
   const products = readProducts();
-  const { name, price, image, discount, category, weeklyOffer } = req.body || {};
+  const { name, price, image, category } = req.body || {};
 
   if (!name || price === undefined) {
     return res.status(400).json({ error: 'Los campos "name" y "price" son obligatorios' });
@@ -64,9 +64,7 @@ app.post('/api/products', (req, res) => {
     name: String(name),
     price: Number(price),
     image: image || '',
-    discount: Number(discount) || 0,
-    category: category || '',
-    weeklyOffer: weeklyOffer === true || weeklyOffer === 'true' || weeklyOffer === 1 || weeklyOffer === '1' || false
+    category: category || ''
   };
 
   products.push(newProduct);
@@ -85,13 +83,11 @@ app.put('/api/products/:id', (req, res) => {
 
   const body = req.body || {};
   // Campos permitidos para actualizar
-  const fields = ['name', 'price', 'image', 'discount', 'category', 'weeklyOffer'];
+  const fields = ['name', 'price', 'image', 'category'];
   fields.forEach(f => {
     if (body[f] !== undefined) {
-      if (f === 'price' || f === 'discount') {
+      if (f === 'price') {
         products[idx][f] = Number(body[f]);
-      } else if (f === 'weeklyOffer') {
-        products[idx][f] = body[f] === true || body[f] === 'true' || body[f] === 1 || body[f] === '1';
       } else {
         products[idx][f] = body[f];
       }
@@ -102,6 +98,25 @@ app.put('/api/products/:id', (req, res) => {
   if (!ok) return res.status(500).json({ error: 'No se pudo guardar el producto' });
 
   res.json(products[idx]);
+});
+
+// Eliminar un producto
+app.delete('/api/products/:id', (req, res) => {
+  const products = readProducts();
+  const id = String(req.params.id);
+  const idx = products.findIndex(p => String(p.id) === id);
+  if (idx === -1) return res.status(404).json({ error: 'Producto no encontrado' });
+
+  const deleted = products.splice(idx, 1);
+  const ok = writeProducts(products);
+  if (!ok) return res.status(500).json({ error: 'No se pudo eliminar el producto' });
+
+  res.json({ message: 'Producto eliminado', deleted: deleted[0] });
+});
+
+// Servir el panel admin
+app.get('/admin', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'admin.html'));
 });
 
 // Endpoint para actualizar banner.json (archivo en la raíz del proyecto)
