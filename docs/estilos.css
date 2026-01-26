@@ -462,6 +462,18 @@ main {
 .pd-info h2 { margin-top:0; font-size:1.6rem; }
 .pd-info .muted { color: #666; margin:6px 0; }
 
+/* Price box style to match reference */
+.pd-pricebox {
+    margin-top: 18px;
+    background: #f3f3f3;
+    padding: 14px;
+    border-radius: 6px;
+    display: inline-block;
+}
+.pd-pricebox .label { color: #666; font-size: 0.95rem; margin-bottom:6px; }
+.pd-pricebox .price { color: #c21; font-size: 1.9rem; font-weight: 700; margin-top:6px; }
+.pd-pricebox .sub { color: #666; font-size: 0.9rem; margin-top:6px; }
+
 @media (max-width:900px){
     .pd-content { flex-direction: column; }
     .pd-image{ flex-basis: auto; }
