@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Admin - Añadir producto</title>
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;padding:16px}
+    form{max-width:600px}
+    label{display:block;margin-top:8px}
+    input[type=text]{width:100%;padding:8px;margin-top:4px}
+    button{margin-top:12px;padding:8px 12px}
+    .msg{margin-top:12px}
+  </style>
+</head>
+<body>
+  <h1>Administración - Añadir producto</h1>
+  <p>Rellena los datos y haz click en <strong>Añadir</strong>. La imagen debe estar en la carpeta <code>/productos</code> o usar una URL accesible.</p>
+  <form id="frm">
+    <label>Nombre
+      <input type="text" id="name" required>
+    </label>
+    <label>Nombre de imagen (ej: leche_unidos_azucarada.png) o ruta (/productos/archivo.png)
+      <input type="text" id="image" placeholder="/productos/mi-imagen.png">
+    </label>
+    <label>Categoría
+      <input type="text" id="category">
+    </label>
+    <button type="submit">Añadir</button>
+  </form>
+  <div class="msg" id="msg"></div>
+
+  <script>
+    const form = document.getElementById('frm');
+    const msg = document.getElementById('msg');
+    form.addEventListener('submit', async (e)=>{
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      let image = document.getElementById('image').value.trim();
+      const category = document.getElementById('category').value.trim();
+      if (!name) return msg.textContent = 'El nombre es obligatorio.';
+      if (image && !image.startsWith('/')) image = '/productos/' + image;
+      try {
+        const res = await fetch('/api/products', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, image, category })
+        });
+        if (!res.ok) throw new Error('Error ' + res.status);
+        const data = await res.json();
+        msg.textContent = 'Producto añadido con id ' + data.id;
+        form.reset();
+      } catch (err) {
+        console.error(err);
+        msg.textContent = 'Error al agregar: ' + err.message;
+      }
+    });
+  </script>
+</body>
+</html>

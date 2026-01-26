@@ -26,8 +26,10 @@ a {
     background-color: #f38405;
     border-bottom: 1px solid #ddd;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    max-width: 1400px;
-    margin: 0 auto;
+    max-width: none; /* usar todo el ancho */
+    margin: 0; /* eliminar margen automático */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Barra superior de contacto eliminada - reglas removidas */
@@ -116,16 +118,16 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 11px 0; /* reducido para disminuir altura del header */
-    /* Cambio: permitir apilamiento en móvil */
-    flex-wrap: wrap; 
+    padding: 11px 12px; /* reducir márgenes laterales usando padding en lugar de margen */
+    flex-wrap: wrap;
+    box-sizing: border-box;
 }
 
 .logo {
     display:flex;
     align-items:center;
     gap:8px;
-    margin-left: 10px; /* separa 10px del borde izquierdo en pantallas grandes */
+    margin-left: 0; /* quitar margen lateral extra */
 }
 .logo img{  width: 180px; height: 150px; display:block; }
 
@@ -137,14 +139,14 @@ a {
 .search-bar {
     display: flex;
     flex-grow: 0;
-    margin: 0 auto; /* centra horizontalmente dentro del header */
-    max-width: 430px; /* reducido para acortar un poco la barra */
+    margin: 0; /* quitar auto para evitar centrar que genera espacio lateral */
+    max-width: 430px;
     width: min(430px, 55%);
     background: #fff;
-    padding: 6px 8px; /* ligero aumento para balance visual */
-    border-radius: 4px; /* forma más rectangular */
+    padding: 6px 8px;
+    border-radius: 4px;
     align-items: left;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.03); /* sombra más sutil */
+    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
 }
 
 /* Cambio: Ocultar la barra de búsqueda en móvil para ahorrar espacio */
@@ -399,6 +401,72 @@ a {
     color: #f38405;
     text-decoration: underline;
 }
+
+/* Contenedor principal: usar todo el ancho con un padding pequeño en vez de márgenes */
+main {
+    max-width: none;
+    width: 100%;
+    padding: 0 12px;
+    box-sizing: border-box;
+}
+
+/* Ajustes para secciones centradas que usaban `margin: 0 auto` */
+.about-text, .contact-section, .product-carousel {
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+/* Estilos para listado de productos */
+.product-carousel {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+    align-items: start;
+    padding: 12px 0;
+}
+.product-carousel .producto {
+    background: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.product-carousel .producto img {
+    /* Ajuste: tamaño de producto aumentado a 250px */
+    width: 250px !important;
+    height: 250px !important;
+    max-width: none;
+    object-fit: contain;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+.product-carousel .producto h3 {
+    font-size: 0.95rem;
+    margin: 0;
+    color: #222;
+}
+
+/* Product detail modal styles */
+.product-detail { position: fixed; inset: 0; display: none; z-index: 4000; }
+.product-detail.open { display: block; }
+.pd-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.45); }
+.pd-panel { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); background: #fff; max-width: 1100px; width: calc(100% - 40px); border-radius: 8px; box-shadow: 0 12px 40px rgba(0,0,0,0.3); overflow: hidden; }
+.pd-close { position: absolute; right: 12px; top: 8px; z-index: 3; background: transparent; border: none; font-size: 1.2rem; cursor: pointer; }
+.pd-content { display: flex; gap: 20px; padding: 28px; align-items: flex-start; }
+.pd-image { flex: 0 0 48%; display:flex; justify-content:center; align-items:center; }
+.pd-image img { max-width: 100%; height: auto; border-radius:6px; }
+.pd-info { flex: 1; }
+.pd-info h2 { margin-top:0; font-size:1.6rem; }
+.pd-info .muted { color: #666; margin:6px 0; }
+
+@media (max-width:900px){
+    .pd-content { flex-direction: column; }
+    .pd-image{ flex-basis: auto; }
+}
+
 
 
 .main-content {
@@ -703,4 +771,3 @@ main > .main-content { padding-bottom: 0; }
 @media (max-width: 433px) {
     .logo img { width: 190px !important; height: 160px !important; max-width: none !important; }
 }
-

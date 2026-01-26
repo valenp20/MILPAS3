@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Leche Unidos Azucarada",
+    "image": "/productos/leche_unidos_azucarada.png",
+    "category": "Lácteos"
+  },
+  {
+    "id": 2,
+    "name": "Aceite Unidos X 1000ml",
+    "image": "/productos/Aceite Unidos X 1000ml.png",
+    "category": "Aceites y Untables"
+  },
+  {
+    "id": 3,
+    "name": "Arroz Integral",
+    "image": "/productos/arroz_integral.png",
+    "category": "Granos y Cereales"
+  }
+]
