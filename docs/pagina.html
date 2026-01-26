@@ -8,17 +8,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Instrument+Serif&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <title>Mi Página</title>
-    <base href="/pagina/">
+   
     <link rel="stylesheet" href="estilos.css?v=6.0"> 
-    <style>
-    /* Forzar +10px al logo en móviles (pagina/pagina.html usa ../docs/logo.png 200x150) */
-    @media (max-width: 600px) {
-        .logo img { width: 210px !important; height: 160px !important; max-width: none !important; }
-    }
-    @media (max-width: 433px) {
-        .logo img { width: 210px !important; height: 160px !important; max-width: none !important; }
-    }
-    </style>
 </head>
 <body>
 
@@ -27,7 +18,7 @@
     <header class="main-header">
         <div class="header-main">
             <div class="logo">
-                <a href="#"><img src="/docs/logo.png" width="200" height="150" alt="Logo"></a>
+                <a href="#"><img src="logo.png" width="200" height="150" alt="Logo"></a>
             </div>
            
             <div class="search-bar">
@@ -46,16 +37,12 @@
                 <a href="#" id="products-link">NUESTROS PRODUCTOS ▾</a>
                 <ul class="products-submenu" aria-hidden="true">
                     <li><a href="#" data-category="Lácteos">LACTEOS</a></li>
-                    <li><a href="#" data-category="Frutos Secos">FRUTOS SECOS</a></li>
-                    <li><a href="#" data-category="Panaderia">PANADERIA</a></li>
-                    <li><a href="#" data-category="Limpieza">LIMPIEZA</a></li>
-                    <li><a href="#" data-category="Dulces y postres">DULCES Y POSTRES</a></li>
-                <li><a href="#" data-category="Aseo personal">ASEO PERSONAL</a></li>
-                <li><a href="#" data-category="Aceites y untables">ACEITES Y UNTABLES</a></li>
-                <li><a href="#" data-category="Bebidas">BEBIDAS</a></li>
-                <li><a href="#" data-category="Condimentos">CONDIMENTOS</a></li>
-                <li><a href="#" data-category="Enlatados">ENLATADOS</a></li>
-               <li><a href="#" data-category="Granos y cereales">GRANOS Y CEREALES</a></li>
+                    <li><a href="#" data-category="Frutas">FRUTAS Y VERDURAS</a></li>
+                    <li><a href="#" data-category="Carnes">CARNES</a></li>
+                    <li><a href="#" data-category="Aseo">ASEO</a></li>
+                    <li><a href="#" data-category="Hogar">HOGAR</a></li>
+                    <li><a href="#" data-category="Despensa">DESPENSA</a></li>
+                </ul>
             </li>
             <li><a href="#contacto" data-category="Contact">CONTACTANOS</a></li>
         </ul>
@@ -100,25 +87,6 @@
         <div class="product-carousel" id="product-carousel">
             
         </div>
-
-        <!-- Product detail modal (opened when clicking a product) -->
-        <section id="product-detail" class="product-detail" aria-hidden="true">
-            <div class="pd-overlay" id="pd-overlay"></div>
-            <div class="pd-panel" role="dialog" aria-modal="true">
-                <button id="pd-close" class="pd-close" aria-label="Cerrar">✕</button>
-                <div class="pd-content">
-                    <div class="pd-image">
-                        <img id="pd-image" src="" alt="Imagen producto">
-                    </div>
-                    <div class="pd-info">
-                        <h2 id="pd-name">Nombre producto</h2>
-                        <p id="pd-category" class="muted"></p>
-                        <p id="pd-sku" class="muted"></p>
-                        <p id="pd-desc"></p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         
         <section id="about" class="contact-section" style="margin:20px;">
@@ -213,22 +181,20 @@
                 products.forEach(p => {
                     const div = document.createElement('div');
                     div.className = 'producto';
-                    div.dataset.id = p.id;
-                    div.style.cursor = 'pointer';
 
                     const img = document.createElement('img');
                     img.src = p.image;
                     img.alt = p.name;
-                    img.width = 40;
-                    img.height = 40;
+                    img.width = 50;
+                    img.height = 50;
 
                     const h3 = document.createElement('h3');
                     h3.textContent = String(p.name).replace(/\s*&\s*/g, ' y ');
 
                     div.appendChild(img);
                     div.appendChild(h3);
-                    div.addEventListener('click', ()=> openDetail(p.id));
-                    container.appendChild(div);
+
+                        container.appendChild(div);
                 });
             } catch (err) {
                 console.error(err);
@@ -237,7 +203,6 @@
             }
         }
 
-        // No cargar productos automáticamente en la sección inicio
         // document.addEventListener('DOMContentLoaded', loadProducts);
     </script>
     <script>
@@ -321,14 +286,7 @@
                 function renderProducts(products){
                    
                     const isHome = (window.isHomeMode === undefined) ? true : !!window.isHomeMode;
-                    // Si estamos en la página de inicio, no mostrar productos aquí
-                    if (isHome) {
-                        container.innerHTML = '';
-                        const titleEl = document.getElementById('category-title');
-                        if (titleEl) titleEl.style.display = 'none';
-                        return;
-                    }
-                    const list = (products || []);
+                    const list = isHome ? (products || []).filter(p => !p.discount || Number(p.discount) <= 0) : (products || []);
                     container.innerHTML = '';
                     if (!list || list.length === 0) {
                         
@@ -342,18 +300,15 @@
                         const img = document.createElement('img');
                         img.src = p.image || '';
                         img.alt = p.name || '';
-                        img.width = 40;
-                        img.height = 40;
-
-                        div.dataset.id = p.id;
-                        div.style.cursor = 'pointer';
+                        img.width = 50;
+                        img.height = 50;
 
                         const h3 = document.createElement('h3');
                         h3.textContent = String(p.name).replace(/\s*&\s*/g, ' y ');
 
                         div.appendChild(img);
                         div.appendChild(h3);
-                        div.addEventListener('click', ()=> openDetail(p.id));
+
                         container.appendChild(div);
                     });
                 }
@@ -524,40 +479,9 @@
                     }
                 }
 
-                // Detalle de producto
-                function openDetail(id){
-                    const prod = allProducts.find(p => String(p.id) === String(id));
-                    if (!prod) return;
-                    document.getElementById('pd-image').src = prod.image || '';
-                    document.getElementById('pd-name').textContent = prod.name || '';
-                    document.getElementById('pd-category').textContent = prod.category || '';
-                    document.getElementById('pd-sku').textContent = prod.sku ? ('SKU: ' + prod.sku) : '';
-                    document.getElementById('pd-desc').textContent = prod.description || '';
-                    const modal = document.getElementById('product-detail');
-                    modal.setAttribute('aria-hidden','false');
-                    modal.classList.add('open');
-                }
-
-                function closeDetail(){
-                    const modal = document.getElementById('product-detail');
-                    modal.setAttribute('aria-hidden','true');
-                    modal.classList.remove('open');
-                }
-
-                // Listeners globales para cerrar
-                document.addEventListener('click', (ev)=>{
-                    const pnl = document.querySelector('.pd-panel');
-                    const modal = document.getElementById('product-detail');
-                    if (!modal || modal.getAttribute('aria-hidden') === 'true') return;
-                    if (ev.target.id === 'pd-close' || ev.target.id === 'pd-overlay') closeDetail();
-                });
-                document.addEventListener('keydown', (e)=>{ if (e.key === 'Escape') closeDetail(); });
-
                   
                 document.addEventListener('DOMContentLoaded', ()=>{
                     initNavFilters();
-                    // Obtener productos en background para poder filtrar cuando el usuario seleccione categoría
-                    fetchAllProducts();
                     
                     fetchAllProducts().then(()=>{
                        
