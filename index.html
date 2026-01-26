@@ -439,11 +439,10 @@
 
                             
                             if (cat === 'Home') {
-                                
                                 hideInfoSections();
                                 toggleHero(true);
                                 showHome();
-                                showProducts();
+                                // do not call showProducts() here: products must only appear when a category is selected
                                 return;
                             }
                             if (cat === 'About') {
@@ -511,9 +510,9 @@
                         const titleEl = document.getElementById('category-title');
                         if (titleEl) { titleEl.style.display = 'none'; titleEl.textContent = ''; }
                       
-                        
-                        window.isHomeMode = true;
-                        if (typeof showProducts === 'function') showProducts();
+                        // Do not show products on Inicio by default. Products appear when a category is clicked.
+                        window.isHomeMode = false;
+                        if (typeof hideProducts === 'function') hideProducts();
                         const colsInit = document.querySelectorAll('.featured-products .section-column');
                         colsInit.forEach(c => c.style.display = '');
                     });
@@ -521,18 +520,18 @@
 
                     
                     function showHome(){
-                        
-                        window.isHomeMode = true;
+                        // Home should not display the product carousel. Keep featured columns visible.
+                        window.isHomeMode = false;
                         const cols = document.querySelectorAll('.featured-products .section-column');
                         cols.forEach(c => c.style.display = '');
-                    
+
                         document.querySelectorAll('#nav-links a').forEach(a=>a.classList.remove('active'));
                         document.querySelectorAll('#side-nav .side-link').forEach(b=>b.classList.remove('active'));
                       
                         const titleEl = document.getElementById('category-title'); if (titleEl) { titleEl.style.display = 'none'; titleEl.textContent = ''; }
                        
-                        if (typeof loadProducts === 'function') loadProducts();
-                        if (typeof showProducts === 'function') showProducts();
+                        // Ensure products are hidden on Home
+                        if (typeof hideProducts === 'function') hideProducts();
                     }
 
                     
