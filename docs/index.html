@@ -315,6 +315,11 @@
                         div.appendChild(img);
                         div.appendChild(h3);
 
+                        // Agregar evento click para mostrar detalles
+                        div.addEventListener('click', () => {
+                            alert(`Producto: ${p.name}\nCategoría: ${p.category}`);
+                        });
+
                         container.appendChild(div);
                     });
                 }
