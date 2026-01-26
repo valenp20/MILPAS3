@@ -296,11 +296,12 @@
                     }
                
                 function renderProducts(products){
-
+                   
                     const isHome = (window.isHomeMode === undefined) ? true : !!window.isHomeMode;
                     const list = isHome ? (products || []).filter(p => !p.discount || Number(p.discount) <= 0) : (products || []);
                     container.innerHTML = '';
                     if (!list || list.length === 0) {
+                        
                         container.innerHTML = '';
                         return;
                     }

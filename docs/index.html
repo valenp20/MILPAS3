@@ -281,26 +281,21 @@
                     function showProducts(){
                         if (container) container.style.display = '';
                         const titleEl = document.getElementById('category-title');
-                            if (isHome) { 
-                                container.innerHTML = ''; 
-                                return; 
-                            }
+                        if (titleEl && titleEl.textContent && titleEl.textContent.trim()) titleEl.style.display = '';
+                    }
+                    function hideProducts(){
+                        if (container) container.style.display = 'none';
                         const titleEl = document.getElementById('category-title');
                         if (titleEl) titleEl.style.display = 'none';
                     }
                
                 function renderProducts(products){
-
+                   
                     const isHome = (window.isHomeMode === undefined) ? true : !!window.isHomeMode;
-                    // Si estamos en la sección INICIO, no mostrar los productos aquí
-                    if (isHome) {
-                        container.innerHTML = '';
-                        return;
-                    }
-
-                    const list = (products || []);
+                    const list = isHome ? (products || []).filter(p => !p.discount || Number(p.discount) <= 0) : (products || []);
                     container.innerHTML = '';
                     if (!list || list.length === 0) {
+                        
                         container.innerHTML = '';
                         return;
                     }
