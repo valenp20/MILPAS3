@@ -3,18 +3,24 @@
     "id": 1,
     "name": "Leche Unidos Azucarada",
     "image": "productos/leche_unidos_azucarada.png",
-    "category": "Lácteos"
+    "category": "Lácteos",
+    "description": "Leche fresca azucarada de la marca Unidos, ideal para el desayuno.",
+    "price": "$3.500"
   },
   {
     "id": 2,
     "name": "Aceite Unidos X 1000ml",
     "image": "productos/Aceite Unidos X 1000ml.png",
-    "category": "Aceites y Untables"
+    "category": "Aceites y Untables",
+    "description": "Aceite vegetal de alta calidad, perfecto para cocinar.",
+    "price": "$5.200"
   },
   {
     "id": 3,
     "name": "Margarina Unidos Con Sal X 1000gr",
     "image": "productos/Margarina Unidos Con Sal X 1000gr.png",
-    "category": "Aceites y Untables"
+    "category": "Aceites y Untables",
+    "description": "Margarina con sal, excelente para untar en panes y repostería.",
+    "price": "$4.100"
   }
 ]

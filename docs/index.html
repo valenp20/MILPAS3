@@ -321,6 +321,8 @@
                             document.getElementById('modal-image').src = p.image;
                             document.getElementById('modal-image').alt = p.name;
                             document.getElementById('modal-category').textContent = `Categoría: ${p.category}`;
+                            document.getElementById('modal-description').textContent = p.description || 'Sin descripción';
+                            document.getElementById('modal-price').textContent = `Precio: ${p.price || 'No disponible'}`;
                             document.getElementById('product-modal').style.display = 'flex';
                         });
 
@@ -705,8 +707,10 @@
         <div class="modal-content" style="background: white; padding: 20px; border-radius: 8px; max-width: 500px; width: 90%; position: relative;">
             <span class="close" style="position: absolute; top: 10px; right: 15px; font-size: 24px; cursor: pointer;">&times;</span>
             <h2 id="modal-title"></h2>
-            <img id="modal-image" src="" alt="" style="max-width: 100%; height: auto;">
+            <img id="modal-image" src="" alt="" style="max-width: 100%; height: auto; margin: 10px 0;">
             <p id="modal-category"></p>
+            <p id="modal-description"></p>
+            <p id="modal-price" style="font-weight: bold;"></p>
         </div>
     </div>
 
