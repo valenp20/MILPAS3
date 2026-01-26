@@ -99,9 +99,7 @@
        
         <h2 id="category-title" style="display:none; text-align:center; margin-top:18px;"> </h2>
 
-        <div class="product-carousel" id="product-carousel">
-            
-        </div>
+        <!-- product-carousel removed from Home -->
 
         
         <section id="about" class="contact-section" style="margin:20px;">
@@ -191,6 +189,8 @@
                 if (!res.ok) throw new Error('Error al obtener productos');
                 const products = await res.json();
                 const container = document.getElementById('product-carousel');
+                if (!container) return; // carousel removed on Home
+                if (!container) return; // carousel removed on Home
                 container.innerHTML = '';
                 
                 products.forEach(p => {
@@ -281,6 +281,7 @@
 
             (function(){
                     const container = document.getElementById('product-carousel');
+                    if (!container) return; // carousel removed on Home
                     const nav = document.getElementById('nav-links');
                     let allProducts = [];
 
