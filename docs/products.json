@@ -26,7 +26,7 @@
    {
     "id": 4,
     "name": "Agua pura Unidos botella x1000ml",
-    "image": "productos/Margarina Unidos Con Sal X 1000gr.png",
+    "image": "productos/AGUA PURA UNIDOS X1000.png",
     "category": "Bebidas",
     "description": "Un litro de pureza cristalina diseñado para mantener tu energía y bienestar en cada gota.",
     "price": "$850"
@@ -34,7 +34,7 @@
   {
     "id": 5,
     "name": "Almendra natural Unidos x100gr",
-    "image": "productos/Margarina Unidos Con Sal X 1000gr.png",
+    "image": "productos/ALMENDRA LAMINADA X 100.png",
     "category": "Frutos secos",
     "description": "Toda la frescura y el poder antioxidante de la almendra natural en un empaque de 100g listo para llevar a donde quieras.",
     "price": "$6.700"
@@ -42,7 +42,7 @@
    {
   "id": 5,
     "name": "Arequipe natural Unidos tarrina x200gr",
-    "image": "productos/Margarina Unidos Con Sal X 1000gr.png",
+    "image": "productos/AREQUIPE_UNIDOS_200.png",
     "category": "Aceites y Untables",
     "description": "Date un gusto irresistible con nuestro arequipe natural de 200g, elaborado tradicionalmente para fundirse en tu paladar.",
     "price": "$4.950"
