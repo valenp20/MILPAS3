@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Leche Unidos Azucarada",
-    "image": "productos/leche_unidos_azucarada.png",
+    "image": "docs/productos/leche_unidos_azucarada.png",
     "category": "Lácteos",
     "description": "Leche fresca azucarada de la marca Unidos, ideal para el desayuno.",
     "price": "$3.500"
@@ -10,7 +10,7 @@
   {
     "id": 2,
     "name": "Aceite Unidos X 1000ml",
-    "image": "productos/Aceite Unidos X 1000ml.png",
+    "image": "docs/productos/Aceite Unidos X 1000ml.png",
     "category": "Aceites y Untables",
     "description": "Aceite vegetal de alta calidad, perfecto para cocinar.",
     "price": "$5.200"
@@ -18,7 +18,7 @@
   {
     "id": 3,
     "name": "Margarina Unidos Con Sal X 1000gr",
-    "image": "productos/Margarina Unidos Con Sal X 1000gr.png",
+    "image": "docs/productos/Margarina Unidos Con Sal X 1000gr.png",
     "category": "Aceites y Untables",
     "description": "Margarina con sal, excelente para untar en panes y repostería.",
     "price": "$4.100"
@@ -26,7 +26,7 @@
    {
     "id": 4,
     "name": "Agua pura Unidos botella x1000ml",
-    "image": "productos/AGUA PURA UNIDOS X1000.png",
+    "image": "docs/productos/AGUA PURA UNIDOS X1000.png",
     "category": "Bebidas",
     "description": "Un litro de pureza cristalina diseñado para mantener tu energía y bienestar en cada gota.",
     "price": "$850"
@@ -34,18 +34,18 @@
   {
     "id": 5,
     "name": "Almendra natural Unidos x100gr",
-    "image": "productos/ALMENDRA LAMINADA X 100.png",
+    "image": "docs/productos/ALMENDRA LAMINADA X 100.png",
     "category": "Frutos secos",
     "description": "Toda la frescura y el poder antioxidante de la almendra natural en un empaque de 100g listo para llevar a donde quieras.",
     "price": "$6.700"
   },
    {
-  "id": 5,
+  "id": 6,
     "name": "Arequipe natural Unidos tarrina x200gr",
-    "image": "productos/AREQUIPE_UNIDOS_200.png",
+    "image": "docs/productos/AREQUIPE_UNIDOS_200.png",
     "category": "Aceites y Untables",
     "description": "Date un gusto irresistible con nuestro arequipe natural de 200g, elaborado tradicionalmente para fundirse en tu paladar.",
     "price": "$4.950"
-  },
+  }
 ]
 
