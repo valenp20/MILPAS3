@@ -10,7 +10,7 @@
   {
     "id": 2,
     "name": "Aceite Unidos X 1000ml",
-    "image": "productos/aceite_unidos_1000ml.png",
+    "image": "productos/aceiteunidosx1000ml.png",
     "category": "Aceites y Untables",
     "description": "Aceite vegetal de alta calidad, perfecto para cocinar.",
     "price": "$5.200"
@@ -18,7 +18,7 @@
   {
     "id": 3,
     "name": "Margarina Unidos Con Sal X 1000gr",
-    "image": "productos/margarina_unidos_1000gr.png",
+    "image": "productos/margarinaunidos_consal_x1000gr.png",
     "category": "Aceites y Untables",
     "description": "Margarina con sal, excelente para untar en panes y repostería.",
     "price": "$4.100"
