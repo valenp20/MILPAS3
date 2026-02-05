@@ -46,5 +46,79 @@
     "category": "Aceites y Untables",
     "description": "Date un gusto irresistible con nuestro arequipe natural de 200g, elaborado tradicionalmente para fundirse en tu paladar.",
     "price": "$4.950"
-  }
+  },
+   {
+    "id": 7,
+    "name": "Salsa de tomte Unidos x400gr",
+    "image": "productos/salsadetomateunidosx400.png",
+    "category": "Aceites y Untables",
+    "description": "Lleva a tu mesa el sabor clásico y casero con nuestra salsa de tomate natural de 400g, elaborada para dar ese toque especial que a todos les encanta.",
+    "price": "$6.200"
+     
+  },
+  {
+  "id": 8,
+    "name": "Salsa de tomate Unidos x200gr",
+    "image": "productos/salsatomate unidosx200grcx24.png",
+    "category": "Aceites y Untables",
+    "description": "Dale a tus platos ese toque casero e irresistible con nuestra salsa de tomate natural, la aliada ideal para tus recetas favoritas.",
+    "price": "$3.950"
+  },
+  {
+    "id": 9,
+    "name": "Margarina Unidos edicion especial x1000gr ",
+    "image": "productos/margarina_edicionespecialx1000gr.png",
+    "category": "Aceites y Untables",
+    "description": "Descubre el sabor superior de nuestra Edición Especial: una margarina de 100g con cremosidad única y el toque de sal ideal para tus momentos gourmet.",
+    "price": "$18.050"
+  },
+  {
+  "id": 10,
+    "name": "Margarina en barra Unidos x125gr ",
+    "image": "productos/margarina_enbarraunidosx125grcx80.png",
+    "category": "Aceites y Untables",
+    "description": "La barra de 125g ideal para untar o cocinar, ofreciendo la consistencia perfecta y ese sabor tradicional que transforma tus desayunos.",
+    "price": "$1.950"
+  },
+  {
+  "id": 11,
+    "name": "Margarina Unidos x250gr",
+    "image": "productos/margarinaunidosx250.png",
+    "category": "Aceites y Untables",
+    "description": "La medida perfecta de 250g para el uso diario en el hogar, brindando cremosidad y un sabor inigualable a todas tus comidas.",
+    "price": "$5.550"
+  },
+  {
+  "id": 12,
+    "name": "Mayonesa Unidos x200gr",
+    "image": "productos/Margarina Unidos Con Sal X 1000gr.png",
+    "category": "Aceites y Untables",
+    "description": "Disfruta de la textura más suave y cremosa en esta práctica presentación de 200g, el toque final perfecto para tus recetas favoritas",
+    "price": "$3.600"
+  },
+  {
+  "id": 13,
+    "name": "Mayonesa Unidos x380gr",
+    "image": "productos/mayonesaunidosx380gr.png",
+    "category": "Aceites y Untables",
+    "description": "Elaborada con ingredientes seleccionados para ofrecerte ese toque casero y el equilibrio ideal de sabor que tu familia merece.",
+    "price": "$5.750"
+  },
+  {
+  "id": 14,
+    "name": "Aceite giralsol Unidos x3000ml",
+    "image": "productos/aceitegirasolunidosx3000.png",
+    "category": "Aceites Y Untables",
+    "description": "Máxima durabilidad y resistencia al calor en una botella de 3 litros, diseñada para quienes cocinan en grande con la confianza de siempre.",
+    "price": "$38.650"
+  },
+  {
+  "id": 15,
+    "name": "Toallas humedas dampy pag 80 lleve 120",
+    "image": "productos/toallahumedasdampy120.png",
+    "category": "Aseo Personal",
+    "description": "Limpia y protege la delicada piel de tu bebé con la suavidad de Dampy, ahora en un pack rendidor de 120 unidades con el ahorro que buscas.",
+    "price": "$5.000"
+  },
+  
 ]
