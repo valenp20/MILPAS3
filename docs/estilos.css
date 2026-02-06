@@ -297,6 +297,220 @@ a {
 }
 .contact-inline strong { color: #f38405; margin-right: 6px; }
 
+/* ========================================
+   ESTILOS MODERNOS PARA SECCIÓN DE CONTACTO
+   ======================================== */
+
+.contact-section-modern {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+.contact-container {
+    width: 100%;
+}
+
+.contact-title {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #f38405;
+    text-align: center;
+    margin: 0 0 8px 0;
+    font-family: 'Bitter', 'Libre Baskerville', serif;
+}
+
+.contact-subtitle {
+    font-size: 1.1em;
+    color: #666;
+    text-align: center;
+    margin: 0 0 36px 0;
+    font-style: italic;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.contact-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 32px 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.contact-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f38405, #ff9933);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 12px rgba(243,132,5,0.3);
+}
+
+.contact-card-title {
+    font-size: 1.3em;
+    color: #333;
+    margin: 0 0 12px 0;
+    font-weight: 600;
+}
+
+.contact-card-info {
+    font-size: 1em;
+    color: #666;
+    margin: 0 0 20px 0;
+    line-height: 1.6;
+    word-break: break-word;
+}
+
+.contact-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #f38405;
+    color: white !important;
+    border-radius: 8px;
+    text-decoration: none !important;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95em;
+}
+
+.contact-btn:hover {
+    background: #d86700;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(243,132,5,0.4);
+}
+
+.contact-social-modern {
+    background: #fff;
+    border-radius: 12px;
+    padding: 32px 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.social-title {
+    font-size: 1.5em;
+    color: #333;
+    margin: 0 0 24px 0;
+    font-weight: 600;
+}
+
+.social-icons-modern {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social-link-modern {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.social-link-modern:hover {
+    transform: scale(1.15);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.social-facebook {
+    background: linear-gradient(135deg, #1877f2, #0c63d4);
+}
+
+.social-instagram {
+    background: linear-gradient(135deg, #e4405f, #c13584, #833ab4);
+}
+
+.social-whatsapp {
+    background: linear-gradient(135deg, #25d366, #128c7e);
+}
+
+.contact-btn-whatsapp {
+    background: linear-gradient(135deg, #25d366, #128c7e);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.contact-btn-whatsapp:hover {
+    background: linear-gradient(135deg, #128c7e, #075e54);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .contact-section-modern {
+        padding: 32px 20px;
+        margin: 20px;
+        border-radius: 12px;
+    }
+    
+    .contact-title {
+        font-size: 2em;
+    }
+    
+    .contact-subtitle {
+        font-size: 1em;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-section-modern {
+        padding: 24px 16px;
+        margin: 16px 12px;
+    }
+    
+    .contact-title {
+        font-size: 1.75em;
+    }
+    
+    .contact-card {
+        padding: 24px 20px;
+    }
+    
+    .social-icons-modern {
+        gap: 12px;
+    }
+    
+    .social-link-modern {
+        width: 45px;
+        height: 45px;
+    }
+}
+
 .header-main {
     display: flex;
     justify-content: space-between;
