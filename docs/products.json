@@ -43,7 +43,7 @@
     "id": 6,
     "name": "Arequipe Natural Unidos Tarrina x200gr",
     "image": "productos/arequipex200.png",
-    "category": "Aceites y Untables",
+    "category": "Dulces y Postres",
     "description": "Date un gusto irresistible con nuestro arequipe natural de 200g, elaborado tradicionalmente para fundirse en tu paladar.",
     "price": "$4.950"
   },
@@ -127,5 +127,85 @@
     "category": "Lácteos",
     "description": "Toda la pureza y el valor nutricional de la leche del campo en una presentación de 1100ml con proceso UHT para mayor duración y frescura.",
     "price": "$4.150"
+  },
+  {
+    "id": 17,
+    "name": "Leche UTH Unidos Deslactosada x1100ml",
+    "image": "productos/lechedeslactosadax1100.png",
+    "category": "Lácteos",
+    "description": "Disfruta de toda la nutrición y el sabor natural de la leche sin pesadez, gracias a nuestro proceso deslactosado UHT en una rendidora presentación de 1100ml.",
+    "price": "$4.250"
+  },
+  {
+    "id": 18,
+    "name": "Leche en Polvo Entera x380g",
+    "image": "productos/lechepolvounidosx380g.png",
+    "category": "Lácteos",
+    "description": "Leche en polvo de disolución instantánea, perfecta para enriquecer tus bebidas, postres y recetas favoritas con el sabor de siempre.",
+    "price": "$9.650"
+  }  ,
+  {
+    "id": 20,
+    "name": "Leche Entera Galatea x900ml",
+    "image": "productos/lechenteragalateax900ml.png",
+    "category": "Lácteos",
+    "description": "La fuente de energía y calcio ideal para toda la familia, procesada con los más altos estándares de calidad en su práctica bolsa de 900ml.",
+    "price": "$3.150"
+  }  ,
+  {
+    "id": 21,
+    "name": "Leche Entera Unidos x900ml",
+    "image": "productos/lecheenterax900ml.png",
+    "category": "Lácteos",
+    "description": "Leche entera de alta calidad procesada para conservar su frescura y nutrientes esenciales en una práctica presentación de 900ml.",
+    "price": "$21.450"
+  } ,
+  {
+    "id": 22,
+    "name": "Leche Deslactosada UHT Galatea x900ml",
+    "image": "productos/lechedeslactosadax900ml",
+    "category": "Lácteos",
+    "description": "Disfruta el sabor premium de Galatea con esta leche deslactosada de fácil digestión, ideal para sentirte ligero sin renunciar a la nutrición.",
+    "price": "$3.000"
+  },
+  {
+    "id": 23,
+    "name": "Arroz Unidos x500g",
+    "image": "productos/arrozunidosx500g.png",
+    "category": "Granos y Cereales",
+    "description": "Arroz de grano seleccionado y blanco perfecto, que garantiza una textura suelta y deliciosa en cada una de tus comidas.",
+    "price": "$1.750"
+  }  ,
+  {
+    "id": 24,
+    "name": "Arroz Blanco Unidos x5kl",
+    "image": "productos/arrozunidosx5kl.png",
+    "category": "Granos y Cereales",
+    "description": "Arroz blanco seleccionado de alta pureza en formato familiar, garantizando una textura perfecta y un sabor delicioso en cada preparación.",
+    "price": "$17.750"
+  }  ,
+  {
+    "id": 25,
+    "name": "Avena Instantanea Unidos Sabor Fresa",
+    "image": "productos/avenaunidosfresa.png",
+    "category": "Granos y Cereales",
+    "description": "La combinación perfecta de fibra y energía con un refrescante sabor a fresa, ideal para empezar tu mañana con vitalidad.",
+    "price": "$5.800"
+  }  ,
+  {
+    "id": 26,
+    "name": "Avena Unidos Sabor Vainilla",
+    "image": "productos/avenaunidosvainilla.png",
+    "category": "Granos y Cereales",
+    "description": "Prepara fácilmente un snack saludable y lleno de sabor con nuestra avena instantánea de vainilla, diseñada para quienes buscan nutrición y practicidad.",
+    "price": "$5.800"
+  }  ,
+  {
+    "id": 27,
+    "name": "Cereal Hojuelas Azucaradas x200gr",
+    "image": "productos/hojuelasazucaradasx200gr.png",
+    "category": "Granos y Cereales",
+    "description": "Comienza tu mañana con el crujiente perfecto y la dulzura ideal de nuestras hojuelas de maíz azucaradas, diseñadas para darte energía en cada cucharada.",
+    "price": "$4.450"
   }
 ]
