@@ -70,42 +70,225 @@ a {
 .contact-link:hover { text-decoration: underline; color: #d86700; }
 
 
+/* ========================================
+   ESTILOS MEJORADOS PARA "QUIÉNES SOMOS"
+   ======================================== */
+
+/* Contenedor principal de la sección About */
+.about-section {
+    background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
+    border-radius: 16px;
+    padding: 48px 32px;
+    margin: 40px auto;
+    max-width: 1200px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+.about-container {
+    width: 100%;
+}
+
+/* Título principal */
+.about-title {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #f38405;
+    text-align: center;
+    margin: 0 0 8px 0;
+    font-family: 'Bitter', 'Libre Baskerville', serif;
+}
+
+.about-subtitle {
+    font-size: 1.1em;
+    color: #666;
+    text-align: center;
+    margin: 0 0 36px 0;
+    font-style: italic;
+}
+
+/* Contenedor de imagen mejorado */
+.about-image-wrapper {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-image-wrapper:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 50px rgba(0,0,0,0.15);
+}
+
+.about-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.about-image-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    color: #fff;
+    padding: 16px 20px;
+    font-size: 0.95em;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Contenedor del contenido */
+.about-content {
+    display: grid;
+    gap: 40px;
+}
+
+/* Texto mejorado */
+.about-text {
+    max-width: 1100px;
+    margin: 0 auto;
+    color: #444;
+    line-height: 1.8;
+    column-count: 2;
+    column-gap: 48px;
+    text-align: justify;
+    font-size: 1.05em;
+}
+
+.about-text .about-intro {
+    font-size: 1.15em;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.7;
+    margin-bottom: 1.5em;
+}
+
+.about-text p {
+    break-inside: avoid-column;
+    margin: 0 0 1.2em;
+}
+
+.about-text h4 {
+    color: #f38405;
+    margin-top: 16px;
+    column-span: all;
+    font-size: 1.3em;
+}
+
+/* Tarjetas de destacados */
+.about-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 2px solid #e0e0e0;
+}
+
+.highlight-card {
+    background: #fff;
+    padding: 28px 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.highlight-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 25px rgba(243,132,5,0.15);
+    border-color: #f38405;
+}
+
+.highlight-icon {
+    font-size: 2.5em;
+    margin-bottom: 12px;
+}
+
+.highlight-card h4 {
+    color: #f38405;
+    font-size: 1.1em;
+    margin: 8px 0;
+    font-weight: 600;
+}
+
+.highlight-card p {
+    color: #666;
+    font-size: 1.05em;
+    margin: 4px 0 0;
+    font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .about-text {
+        column-count: 1;
+        column-gap: 0;
+        font-size: 1em;
+    }
+    
+    .about-section {
+        padding: 32px 20px;
+        margin: 20px;
+        border-radius: 12px;
+    }
+    
+    .about-title {
+        font-size: 2em;
+    }
+    
+    .about-subtitle {
+        font-size: 1em;
+    }
+    
+    .about-highlights {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-section {
+        padding: 24px 16px;
+        margin: 16px 12px;
+    }
+    
+    .about-title {
+        font-size: 1.75em;
+    }
+    
+    .about-image-caption {
+        font-size: 0.85em;
+        padding: 12px 16px;
+    }
+}
+
+/* Mantener los estilos de contact-section para otras secciones */
 .contact-section {
     background: #fff;
     border-radius: 8px;
     padding: 14px 20px;
     margin: 12px 20px 18px 20px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.06);
-    display: none; /* hidden by default; shown when user clicks the respective nav link */
+    display: none;
 }
 
-.contact-section h3 { margin-top: 0; color: #f38405; }
-.contact-section a { color: #f38405; font-weight: 700; }
-
-/* Estilos para la sección 'Quiénes somos' */
-.about-image{
-    display: block;
-    max-width: 720px;
-    width: 100%;
-    height: auto;
-    margin: 12px auto;
-    border-radius: 6px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+.contact-section h3 {
+    margin-top: 0;
+    color: #f38405;
 }
-.about-text{
-    max-width: 900px;
-    margin: 8px auto;
-    color: #333;
-    line-height:1.6;
-    column-count: 2;
-    column-gap: 36px;
-    text-align: justify;
-}
-.about-text p{ break-inside: avoid-column; margin: 0 0 1em; }
-.about-text h4{ color: #f38405; margin-top: 12px; column-span: all; }
 
-@media (max-width: 900px) {
-    .about-text { column-count: 1; column-gap: 20px; }
+.contact-section a {
+    color: #f38405;
+    font-weight: 700;
 }
 
 
