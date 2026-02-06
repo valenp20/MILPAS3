@@ -584,16 +584,6 @@ h2 {
 img{
     max-width: 100%;
 }
-.product-carousel {
-    display: flex;
-    overflow-x: auto;
-    gap: 10px; 
-    padding-bottom: 7px;
-    margin: 0;
-    /* Separación de 10px respecto a los bordes del contenedor */
-    padding-left: 10px;
-    padding-right: 10px;
-}
 
 
 
