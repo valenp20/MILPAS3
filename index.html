@@ -64,15 +64,57 @@
     </nav>
 
     
+    <!-- Sección Hero Mejorada -->
     <section class="hero-wrapper">
         <section class="hero">
-                                            <picture>
-                    <source type="image/webp" srcset="fondo-480.webp 480w, fondo-768.webp 768w, fondo-1024.webp 1024w, fondo-1440.webp 1440w, fondo-1920.webp 1920w" sizes="100vw">
-                    <img class="hero-img" src="docs/hero1.png" srcset="docs/fondo-480.jfif 480w, docs/fondo-768.jfif 768w, docs/fondo-1024.jfif 1024w, docs/fondo-1440.jfif 1440w, docs/fondo-1920.jfif 1920w" sizes="100vw" alt="" aria-hidden="true" loading="eager" decoding="async">
-                </picture>
+            <picture>
+                <source type="image/webp" srcset="fondo-480.webp 480w, fondo-768.webp 768w, fondo-1024.webp 1024w, fondo-1440.webp 1440w, fondo-1920.webp 1920w" sizes="100vw">
+                <img class="hero-img" src="docs/hero1.png" srcset="docs/fondo-480.jfif 480w, docs/fondo-768.jfif 768w, docs/fondo-1024.jfif 1024w, docs/fondo-1440.jfif 1440w, docs/fondo-1920.jfif 1920w" sizes="100vw" alt="" aria-hidden="true" loading="eager" decoding="async">
+            </picture>
+            
+            <div class="hero-overlay"></div>
+            
             <div class="hero-inner">
-                <h1>VEGETALES<br>SIEMPRE FRESCOS</h1>
-                <p>TENEMOS EL MEJOR SURTIDO DE VEGETALES FRESCOS PARA USTED</p>
+                <div class="hero-badge">
+                    <span class="badge-icon">🌿</span>
+                    <span class="badge-text">Desde 1969</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="hero-title-line1">VEGETALES</span>
+                    <span class="hero-title-line2">SIEMPRE FRESCOS</span>
+                </h1>
+                
+                <p class="hero-subtitle">Tenemos el mejor surtido de vegetales frescos para usted</p>
+                
+                <div class="hero-cta">
+                    <button class="btn-primary" onclick="document.getElementById('products-link').click()">
+                        Ver Productos
+                        <span class="btn-arrow">→</span>
+                    </button>
+                    <button class="btn-secondary" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+                        Nuestra Historia
+                    </button>
+                </div>
+                
+                <div class="hero-features">
+                    <div class="feature-item">
+                        <span class="feature-icon">✓</span>
+                        <span class="feature-text">Productos Frescos</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">✓</span>
+                        <span class="feature-text">Mejores Precios</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">✓</span>
+                        <span class="feature-text">Calidad Garantizada</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-scroll-indicator">
+                <span class="scroll-arrow">↓</span>
             </div>
         </section>
     </section>
