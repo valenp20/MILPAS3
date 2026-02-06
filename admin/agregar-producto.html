@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agregar Producto - MILPAS3</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 20px;
+      color: #333;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .header p {
+      font-size: 1.1rem;
+      opacity: 0.95;
+    }
+
+    .instructions {
+      background: #f8f9ff;
+      padding: 20px 30px;
+      border-left: 4px solid #667eea;
+      margin: 30px;
+      border-radius: 8px;
+    }
+
+    .instructions h3 {
+      color: #667eea;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .instructions ol {
+      margin-left: 20px;
+      line-height: 1.8;
+    }
+
+    .instructions li {
+      margin-bottom: 8px;
+    }
+
+    .form-container {
+      padding: 30px;
+    }
+
+    .form-group {
+      margin-bottom: 25px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #333;
+      font-size: 0.95rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 15px;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: inherit;
+      transition: all 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #667eea;
+      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .form-group small {
+      display: block;
+      margin-top: 5px;
+      color: #666;
+      font-size: 0.85rem;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .btn {
+      flex: 1;
+      min-width: 150px;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+    }
+
+    .btn-secondary {
+      background: #6c757d;
+      color: white;
+    }
+
+    .btn-secondary:hover {
+      background: #5a6268;
+      transform: translateY(-2px);
+    }
+
+    .btn-success {
+      background: #28a745;
+      color: white;
+    }
+
+    .btn-success:hover {
+      background: #218838;
+      transform: translateY(-2px);
+    }
+
+    .btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .json-preview {
+      margin-top: 30px;
+      padding: 20px;
+      background: #1e1e1e;
+      border-radius: 8px;
+      display: none;
+    }
+
+    .json-preview.show {
+      display: block;
+    }
+
+    .json-preview h3 {
+      color: #fff;
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+    }
+
+    .json-preview pre {
+      background: #2d2d2d;
+      color: #d4d4d4;
+      padding: 20px;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      max-height: 400px;
+    }
+
+    .alert {
+      padding: 15px 20px;
+      margin: 20px 30px;
+      border-radius: 8px;
+      display: none;
+    }
+
+    .alert.show {
+      display: block;
+    }
+
+    .alert-success {
+      background: #d4edda;
+      border: 1px solid #c3e6cb;
+      color: #155724;
+    }
+
+    .alert-error {
+      background: #f8d7da;
+      border: 1px solid #f5c6cb;
+      color: #721c24;
+    }
+
+    .required {
+      color: #dc3545;
+    }
+
+    @media (max-width: 768px) {
+      .header h1 {
+        font-size: 2rem;
+      }
+
+      .button-group {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .form-container,
+      .instructions {
+        padding: 20px;
+      }
+    }
+
+    .syntax-string { color: #ce9178; }
+    .syntax-number { color: #b5cea8; }
+    .syntax-key { color: #9cdcfe; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🛒 Agregar Producto</h1>
+      <p>Sistema para agilizar el ingreso de productos a products.json</p>
+    </div>
+
+    <div class="instructions">
+      <h3>📋 Instrucciones de uso:</h3>
+      <ol>
+        <li>Completa todos los campos del formulario</li>
+        <li>El ID se genera automáticamente (comenzando desde 17)</li>
+        <li>Haz clic en "Generar JSON" para crear el código</li>
+        <li>Copia el JSON generado al portapapeles</li>
+        <li>Pega el código en <code>docs/products.json</code> antes del corchete de cierre <code>]</code></li>
+        <li>Guarda el archivo y valida que no tenga errores de sintaxis</li>
+      </ol>
+    </div>
+
+    <div class="alert alert-success" id="successAlert">
+      ✓ JSON copiado al portapapeles correctamente
+    </div>
+
+    <div class="alert alert-error" id="errorAlert">
+      ✗ Error: Por favor completa todos los campos requeridos
+    </div>
+
+    <form id="productForm" class="form-container">
+      <div class="form-group">
+        <label for="productId">ID del Producto <span class="required">*</span></label>
+        <input type="number" id="productId" name="productId" value="17" readonly>
+        <small>El ID se auto-incrementa automáticamente</small>
+      </div>
+
+      <div class="form-group">
+        <label for="productName">Nombre del Producto <span class="required">*</span></label>
+        <input type="text" id="productName" name="productName" placeholder="Ej: Leche Unidos Azucarada" required>
+      </div>
+
+      <div class="form-group">
+        <label for="productImage">Ruta de la Imagen <span class="required">*</span></label>
+        <input type="text" id="productImage" name="productImage" placeholder="productos/nombre_imagen.png" required>
+        <small>Ruta relativa a docs/ (ejemplo: productos/leche.png)</small>
+      </div>
+
+      <div class="form-group">
+        <label for="productCategory">Categoría <span class="required">*</span></label>
+        <select id="productCategory" name="productCategory" required>
+          <option value="">Selecciona una categoría</option>
+          <option value="Lácteos">Lácteos</option>
+          <option value="Aceites y Untables">Aceites y Untables</option>
+          <option value="Bebidas">Bebidas</option>
+          <option value="Frutos Secos">Frutos Secos</option>
+          <option value="Aseo Personal">Aseo Personal</option>
+          <option value="Panadería">Panadería</option>
+          <option value="Limpieza">Limpieza</option>
+          <option value="Hogar">Hogar</option>
+          <option value="Dulces y Postres">Dulces y Postres</option>
+          <option value="Condimentos">Condimentos</option>
+          <option value="Enlatados">Enlatados</option>
+          <option value="Granos y Cereales">Granos y Cereales</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="productDescription">Descripción del Producto <span class="required">*</span></label>
+        <textarea id="productDescription" name="productDescription" placeholder="Descripción detallada del producto..." required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="productPrice">Precio <span class="required">*</span></label>
+        <input type="text" id="productPrice" name="productPrice" placeholder="$0.000" required>
+        <small>El formato se aplicará automáticamente (Ej: $3.500)</small>
+      </div>
+
+      <div class="button-group">
+        <button type="button" class="btn btn-primary" onclick="generateJSON()">Generar JSON</button>
+        <button type="button" class="btn btn-success" onclick="copyToClipboard()" id="copyBtn" disabled>Copiar al Portapapeles</button>
+        <button type="button" class="btn btn-secondary" onclick="clearForm()">Limpiar Formulario</button>
+      </div>
+    </form>
+
+    <div class="json-preview" id="jsonPreview">
+      <h3>📄 JSON Generado:</h3>
+      <pre id="jsonOutput"></pre>
+    </div>
+  </div>
+
+  <script>
+    let generatedJSON = '';
+
+    // Auto-format price input
+    document.getElementById('productPrice').addEventListener('input', function(e) {
+      let value = e.target.value;
+      
+      // Remove all non-digits
+      value = value.replace(/\D/g, '');
+      
+      if (value) {
+        // Add thousands separator
+        value = parseInt(value).toLocaleString('es-CO');
+        e.target.value = '$' + value;
+      }
+    });
+
+    // Auto-increment ID based on latest product
+    function updateProductId() {
+      // Start at 17 as per requirements
+      const currentId = parseInt(document.getElementById('productId').value) || 17;
+      document.getElementById('productId').value = currentId;
+    }
+
+    function validateForm() {
+      const form = document.getElementById('productForm');
+      const inputs = form.querySelectorAll('[required]');
+      let isValid = true;
+
+      inputs.forEach(input => {
+        if (!input.value.trim()) {
+          isValid = false;
+          input.style.borderColor = '#dc3545';
+        } else {
+          input.style.borderColor = '#e0e0e0';
+        }
+      });
+
+      return isValid;
+    }
+
+    function generateJSON() {
+      if (!validateForm()) {
+        showAlert('error', '✗ Error: Por favor completa todos los campos requeridos');
+        return;
+      }
+
+      const id = parseInt(document.getElementById('productId').value);
+      const name = document.getElementById('productName').value.trim();
+      const image = document.getElementById('productImage').value.trim();
+      const category = document.getElementById('productCategory').value;
+      const description = document.getElementById('productDescription').value.trim();
+      const price = document.getElementById('productPrice').value.trim();
+
+      // Create product object
+      const product = {
+        id: id,
+        name: name,
+        image: image,
+        category: category,
+        description: description,
+        price: price
+      };
+
+      // Convert to JSON with proper formatting
+      const jsonString = JSON.stringify(product, null, 2);
+      
+      // Add leading comma and proper indentation
+      const lines = jsonString.split('\n');
+      const indentedLines = lines.map((line, index) => {
+        if (index === 0) {
+          return '  ,' + line; // Add comma before opening brace
+        }
+        return '  ' + line; // Add 2 spaces for indentation
+      });
+      
+      generatedJSON = indentedLines.join('\n');
+
+      // Display JSON with syntax highlighting
+      displayJSON(generatedJSON);
+
+      // Enable copy button
+      document.getElementById('copyBtn').disabled = false;
+
+      // Increment ID for next product
+      document.getElementById('productId').value = id + 1;
+
+      showAlert('success', '✓ JSON generado correctamente. Puedes copiarlo al portapapeles.');
+    }
+
+    function displayJSON(json) {
+      const preview = document.getElementById('jsonPreview');
+      const output = document.getElementById('jsonOutput');
+      
+      // Simple syntax highlighting
+      let highlighted = json
+        .replace(/(".*?")/g, '<span class="syntax-string">$1</span>')
+        .replace(/: (\d+)/g, ': <span class="syntax-number">$1</span>')
+        .replace(/"(\w+)":/g, '<span class="syntax-key">"$1"</span>:');
+      
+      output.innerHTML = highlighted;
+      preview.classList.add('show');
+      
+      // Scroll to preview
+      preview.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    async function copyToClipboard() {
+      if (!generatedJSON) {
+        showAlert('error', '✗ Error: Primero debes generar el JSON');
+        return;
+      }
+
+      try {
+        await navigator.clipboard.writeText(generatedJSON);
+        showAlert('success', '✓ JSON copiado al portapapeles correctamente');
+        
+        // Change button text temporarily
+        const btn = document.getElementById('copyBtn');
+        const originalText = btn.textContent;
+        btn.textContent = '✓ Copiado!';
+        setTimeout(() => {
+          btn.textContent = originalText;
+        }, 2000);
+      } catch (err) {
+        showAlert('error', '✗ Error al copiar: ' + err.message);
+      }
+    }
+
+    function clearForm() {
+      const form = document.getElementById('productForm');
+      
+      // Clear all inputs except ID
+      document.getElementById('productName').value = '';
+      document.getElementById('productImage').value = '';
+      document.getElementById('productCategory').value = '';
+      document.getElementById('productDescription').value = '';
+      document.getElementById('productPrice').value = '';
+      
+      // Reset border colors
+      const inputs = form.querySelectorAll('input, select, textarea');
+      inputs.forEach(input => {
+        input.style.borderColor = '#e0e0e0';
+      });
+      
+      // Hide JSON preview
+      document.getElementById('jsonPreview').classList.remove('show');
+      
+      // Disable copy button
+      document.getElementById('copyBtn').disabled = true;
+      
+      generatedJSON = '';
+      
+      showAlert('success', '✓ Formulario limpiado correctamente');
+    }
+
+    function showAlert(type, message) {
+      // Hide all alerts
+      document.querySelectorAll('.alert').forEach(alert => {
+        alert.classList.remove('show');
+      });
+
+      // Show appropriate alert
+      const alert = type === 'success' ? document.getElementById('successAlert') : document.getElementById('errorAlert');
+      alert.textContent = message;
+      alert.classList.add('show');
+
+      // Auto-hide after 5 seconds
+      setTimeout(() => {
+        alert.classList.remove('show');
+      }, 5000);
+    }
+
+    // Initialize on load
+    window.addEventListener('load', function() {
+      updateProductId();
+    });
+  </script>
+</body>
+</html>

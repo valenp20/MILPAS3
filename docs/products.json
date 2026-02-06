@@ -119,7 +119,7 @@
     "category": "Aseo Personal",
     "description": "Limpia y protege la delicada piel de tu bebé con la suavidad de Dampy, ahora en un pack rendidor de 120 unidades con el ahorro que buscas.",
     "price": "$5.000"
-     }
+     },
   {
   "id": 16,
     "name": "Leche UHT Entera Unidos x1100ml",
@@ -127,5 +127,5 @@
     "category": "Lácteos",
     "description": "Toda la pureza y el valor nutricional de la leche del campo en una presentación de 1100ml con proceso UHT para mayor duración y frescura.",
     "price": "$4.150"
-  },
+  }
 ]
