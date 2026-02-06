@@ -298,6 +298,7 @@
                     function initSearchBar() {
                         const searchInput = document.querySelector('.search-bar input');
                         const searchButton = document.querySelector('.search-bar button');
+                        let searchTimeout = null;
                         
                         if (!searchInput || !searchButton) return;
                         
@@ -352,8 +353,8 @@
                         });
                         
                         searchInput.addEventListener('input', () => {
-                            clearTimeout(searchInput.searchTimeout);
-                            searchInput.searchTimeout = setTimeout(() => {
+                            clearTimeout(searchTimeout);
+                            searchTimeout = setTimeout(() => {
                                 performSearch();
                             }, 500);
                         });
