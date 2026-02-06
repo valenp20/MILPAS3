@@ -854,16 +854,15 @@ main {
 }
 
 .product-carousel .producto img {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100% !important;
-    height: 100% !important;
-    max-width: none;
+    height: auto !important;
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
     object-fit: contain;
     padding: 16px;
     border-radius: 0;
     margin-bottom: 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
     transition: transform 0.5s ease, filter 0.3s ease;
 }
 
