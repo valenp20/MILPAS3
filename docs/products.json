@@ -59,7 +59,7 @@
   {
   "id": 8,
     "name": "Salsa de tomate Unidos x200gr",
-    "image": "productos/salsatomate unidosx200grcx24.png",
+    "image": "productos/salsatomateunidosx200grcx24.png",
     "category": "Aceites y Untables",
     "description": "Dale a tus platos ese toque casero e irresistible con nuestra salsa de tomate natural, la aliada ideal para tus recetas favoritas.",
     "price": "$3.950"
@@ -91,7 +91,7 @@
   {
   "id": 12,
     "name": "Mayonesa Unidos x200gr",
-    "image": "productos/Margarina Unidos Con Sal X 1000gr.png",
+    "image": "productos/mayonesaunidosx200gr.png",
     "category": "Aceites y Untables",
     "description": "Disfruta de la textura más suave y cremosa en esta práctica presentación de 200g, el toque final perfecto para tus recetas favoritas",
     "price": "$3.600"
