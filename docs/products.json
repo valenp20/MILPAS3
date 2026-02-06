@@ -25,7 +25,7 @@
   },
   {
     "id": 4,
-    "name": "Agua pura Unidos botella x1000ml",
+    "name": "Agua Pura Unidos Botella x1000ml",
     "image": "productos/agua.png",
     "category": "Bebidas",
     "description": "Un litro de pureza cristalina diseñado para mantener tu energía y bienestar en cada gota.",
@@ -33,7 +33,7 @@
   },
   {
     "id": 5,
-    "name": "Almendra natural Unidos x100gr",
+    "name": "Almendra Natural Unidos x100gr",
     "image": "productos/almendrax100.png",
     "category": "Frutos secos",
     "description": "Toda la frescura y el poder antioxidante de la almendra natural en un empaque de 100g listo para llevar a donde quieras.",
@@ -41,7 +41,7 @@
   },
   {
     "id": 6,
-    "name": "Arequipe natural Unidos tarrina x200gr",
+    "name": "Arequipe Natural Unidos Tarrina x200gr",
     "image": "productos/arequipex200.png",
     "category": "Aceites y Untables",
     "description": "Date un gusto irresistible con nuestro arequipe natural de 200g, elaborado tradicionalmente para fundirse en tu paladar.",
@@ -49,7 +49,7 @@
   },
    {
     "id": 7,
-    "name": "Salsa de tomte Unidos x400gr",
+    "name": "Salsa de Tomte Unidos x400gr",
     "image": "productos/salsadetomateunidosx400.png",
     "category": "Aceites y Untables",
     "description": "Lleva a tu mesa el sabor clásico y casero con nuestra salsa de tomate natural de 400g, elaborada para dar ese toque especial que a todos les encanta.",
@@ -58,7 +58,7 @@
   },
   {
   "id": 8,
-    "name": "Salsa de tomate Unidos x200gr",
+    "name": "Salsa de Tomate Unidos x200gr",
     "image": "productos/salsatomateunidosx200grcx24.png",
     "category": "Aceites y Untables",
     "description": "Dale a tus platos ese toque casero e irresistible con nuestra salsa de tomate natural, la aliada ideal para tus recetas favoritas.",
@@ -66,7 +66,7 @@
   },
   {
     "id": 9,
-    "name": "Margarina Unidos edicion especial x1000gr ",
+    "name": "Margarina Unidos Edicion Especial x1000gr ",
     "image": "productos/margarina_edicionespecialx1000gr.png",
     "category": "Aceites y Untables",
     "description": "Descubre el sabor superior de nuestra Edición Especial: una margarina de 100g con cremosidad única y el toque de sal ideal para tus momentos gourmet.",
@@ -74,7 +74,7 @@
   },
   {
   "id": 10,
-    "name": "Margarina en barra Unidos x125gr ",
+    "name": "Margarina en Barra Unidos x125gr ",
     "image": "productos/margarina_enbarraunidosx125grcx80.png",
     "category": "Aceites y Untables",
     "description": "La barra de 125g ideal para untar o cocinar, ofreciendo la consistencia perfecta y ese sabor tradicional que transforma tus desayunos.",
@@ -106,7 +106,7 @@
   },
   {
   "id": 14,
-    "name": "Aceite giralsol Unidos x3000ml",
+    "name": "Aceite Giralsol Unidos x3000ml",
     "image": "productos/aceitegirasolunidosx3000.png",
     "category": "Aceites Y Untables",
     "description": "Máxima durabilidad y resistencia al calor en una botella de 3 litros, diseñada para quienes cocinan en grande con la confianza de siempre.",
@@ -114,10 +114,18 @@
   },
   {
   "id": 15,
-    "name": "Toallas humedas dampy pag 80 lleve 120",
+    "name": "Toallas Humedas Dampy Pague 80 Lleve 120",
     "image": "productos/toallahumedasdampy120.png",
     "category": "Aseo Personal",
     "description": "Limpia y protege la delicada piel de tu bebé con la suavidad de Dampy, ahora en un pack rendidor de 120 unidades con el ahorro que buscas.",
     "price": "$5.000"
      }
+  {
+  "id": 16,
+    "name": "Leche UHT Entera Unidos x1100ml",
+    "image": "productos/lecheenterax1100ml.png",
+    "category": "Lácteos",
+    "description": "Toda la pureza y el valor nutricional de la leche del campo en una presentación de 1100ml con proceso UHT para mayor duración y frescura.",
+    "price": "$4.150"
+  },
 ]
