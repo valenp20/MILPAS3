@@ -383,6 +383,71 @@
                         const titleEl = document.getElementById('category-title');
                         if (titleEl) titleEl.style.display = 'none';
                     }
+
+                    function initSearchBar() {
+                        const searchInput = document.querySelector('.search-bar input');
+                        const searchButton = document.querySelector('.search-bar button');
+                        let searchTimeout = null;
+                        
+                        if (!searchInput || !searchButton) return;
+                        
+                        function performSearch() {
+                            const searchTerm = searchInput.value.trim().toLowerCase();
+                            const titleEl = document.getElementById('category-title');
+                            
+                            if (!searchTerm) {
+                                renderProducts(allProducts);
+                                if (titleEl) {
+                                    titleEl.style.display = 'none';
+                                }
+                                showProducts();
+                                return;
+                            }
+                            
+                            const filtered = allProducts.filter(p => {
+                                const name = String(p.name || '').toLowerCase();
+                                const category = String(p.category || '').toLowerCase();
+                                const description = String(p.description || '').toLowerCase();
+                                
+                                return name.includes(searchTerm) || 
+                                       category.includes(searchTerm) || 
+                                       description.includes(searchTerm);
+                            });
+                            
+                            if (titleEl) {
+                                if (filtered.length > 0) {
+                                    titleEl.textContent = `RESULTADOS DE BÚSQUEDA: "${searchInput.value.trim()}" (${filtered.length})`;
+                                    titleEl.style.display = 'block';
+                                } else {
+                                    titleEl.textContent = `NO SE ENCONTRARON RESULTADOS PARA: "${searchInput.value.trim()}"`;
+                                    titleEl.style.display = 'block';
+                                }
+                            }
+                            
+                            hideInfoSections();
+                            renderProducts(filtered);
+                            showProducts();
+                        }
+                        
+                        searchButton.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            performSearch();
+                        });
+                        
+                        searchInput.addEventListener('keypress', (e) => {
+                            if (e.key === 'Enter') {
+                                e.preventDefault();
+                                performSearch();
+                            }
+                        });
+                        
+                        searchInput.addEventListener('input', () => {
+                            clearTimeout(searchTimeout);
+                            searchTimeout = setTimeout(() => {
+                                performSearch();
+                            }, 500);
+                        });
+                    }
                
                 function renderProducts(products){
                    
@@ -595,6 +660,7 @@
                     initNavFilters();
                     
                     fetchAllProducts().then(()=>{
+                        initSearchBar();
                        
                         const titleEl = document.getElementById('category-title');
                         if (titleEl) { titleEl.style.display = 'none'; titleEl.textContent = ''; }
