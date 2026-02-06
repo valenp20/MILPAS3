@@ -305,14 +305,6 @@
                         container.innerHTML = '';
                         return;
                     }
-                    
-                    // Aplicar modo carrusel si hay menos de 5 productos, grid si hay 5 o más
-                    if (list.length < 5) {
-                        container.classList.add('carousel-mode');
-                    } else {
-                        container.classList.remove('carousel-mode');
-                    }
-                    
                     list.forEach(p => {
                         const div = document.createElement('div');
                         div.className = 'producto';

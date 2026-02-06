@@ -419,18 +419,10 @@ main {
 /* Estilos para listado de productos */
 .product-carousel {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    gap: 20px; 
-    padding: 10px;
-    margin: 0;
-}
-
-/* Si hay menos de 5 productos, usar flex horizontal */
-.product-carousel.carousel-mode {
-    display: flex;
-    overflow-x: auto;
-    gap: 10px; 
-    padding-bottom: 7px;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+    align-items: start;
+    padding: 12px 0;
 }
 .product-carousel .producto {
     background: #fff;
@@ -584,6 +576,16 @@ h2 {
 img{
     max-width: 100%;
 }
+.product-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px; 
+    padding-bottom: 7px;
+    margin: 0;
+    /* Separación de 10px respecto a los bordes del contenedor */
+    padding-left: 10px;
+    padding-right: 10px;
+}
 
 
 
@@ -592,12 +594,8 @@ img{
     border-radius: 10px;
     overflow: hidden;
     min-width: 140px; 
-    transition: all 0.3s ease;
-}
-
-/* En modo carousel, mantener el tamaño fijo */
-.carousel-mode .producto {
     flex: 0 0 auto;
+    transition: all 0.3s ease;
 }
 
 .producto img {
