@@ -885,50 +885,359 @@ main {
     padding: 0;
 }
 
-/* Hero styles */
-.hero-wrapper{ width: 100%; padding: 0; }
-.hero{
-    width: 100%; /* full width */
-    min-height: 360px; /* fallback; JS will set exact height between nav and footer */
+/* ==========================================
+   HERO SECTION - DISEÑO PROFESIONAL MEJORADO
+   ========================================== */
+
+.hero-wrapper { 
+    width: 100%; 
+    padding: 0; 
+    position: relative;
+}
+
+.hero {
+    width: 100%;
+    min-height: 500px;
+    height: 70vh;
+    max-height: 700px;
     background-image: url('hero1.png');
     background-size: cover;
     background-position: center;
-    border-radius: 0; /* flush with edges */
-    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    background-attachment: fixed; /* Efecto parallax */
     position: relative;
     overflow: hidden;
-}
-.hero:before{ content:''; position:absolute; inset:0; background: linear-gradient(90deg, rgba(243,132,5,0.85), rgba(0,0,0,0.1)); mix-blend-mode: multiply; }
-.hero-inner{
-    position:absolute;
-    inset:0;
-    z-index:2;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    padding: 40px 60px;
-    color:#fff;
-    text-align:center;
-    /* Sombra de texto aplicada a todos los elementos del hero */
-    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
-}
-/* Ajustes concretos para elementos del hero para mejorar legibilidad */
-.hero-inner h1, .hero-inner p{ text-shadow: 0 2px 6px rgba(0,0,0,0.65); }
-.hero-inner h1{ font-size:48px; line-height:1; margin:0 0 8px; font-weight:700; letter-spacing:0.5px; }
-.hero-inner p{ margin:0 0 16px; font-size:18px; opacity:0.95; }
-
-
-@media (max-width: 900px){
-    /* On mobile provide a smaller minimum hero height while script adapts */
-    .hero{ min-height: 260px; }
-    .hero-inner{ padding: 20px; }
-    .hero-inner h1{ font-size:26px; }
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* --- Nuevas Especificaciones en Mobile View --- */
+/* Overlay oscuro mejorado con gradiente */
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(243, 132, 5, 0.75) 0%,
+        rgba(0, 0, 0, 0.6) 50%,
+        rgba(243, 132, 5, 0.5) 100%
+    );
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at center,
+        rgba(255, 255, 255, 0.1) 0%,
+        rgba(0, 0, 0, 0.3) 100%
+    );
+    z-index: 2;
+}
+
+.hero-inner {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 40px;
+    color: #fff;
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Badge de "Desde 1969" */
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #f38405;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-out 0.3s backwards;
+}
+
+.badge-icon {
+    font-size: 1.2rem;
+}
+
+/* Título principal mejorado */
+.hero-title {
+    font-family: 'Bitter', 'Libre Baskerville', serif;
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0 0 20px;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    letter-spacing: 1px;
+    animation: fadeInUp 1s ease-out 0.2s backwards;
+}
+
+.hero-title-line1 {
+    display: block;
+    font-size: 0.85em;
+    font-weight: 300;
+    letter-spacing: 4px;
+    opacity: 0.95;
+}
+
+.hero-title-line2 {
+    display: block;
+    background: linear-gradient(90deg, #fff 0%, #ffe4b5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Subtítulo mejorado */
+.hero-subtitle {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0 0 36px;
+    opacity: 0.95;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+    max-width: 700px;
+    animation: fadeInUp 1s ease-out 0.4s backwards;
+}
+
+/* Call-to-Action Buttons */
+.hero-cta {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: fadeInUp 1s ease-out 0.6s backwards;
+}
+
+.btn-primary, .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 32px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-family: inherit;
+}
+
+.btn-primary {
+    background: #f38405;
+    color: #fff;
+    box-shadow: 0 4px 20px rgba(243, 132, 5, 0.4);
+}
+
+.btn-primary:hover {
+    background: #d87004;
+    box-shadow: 0 6px 30px rgba(243, 132, 5, 0.6);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #fff;
+    transform: translateY(-2px);
+}
+
+.btn-arrow {
+    transition: transform 0.3s ease;
+}
+
+.btn-primary:hover .btn-arrow {
+    transform: translateX(4px);
+}
+
+/* Características destacadas */
+.hero-features {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeInUp 1s ease-out 0.8s backwards;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 10px 20px;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.feature-icon {
+    font-size: 1.2rem;
+    color: #90EE90;
+}
+
+/* Indicador de scroll */
+.hero-scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+    animation: bounce 2s infinite;
+}
+
+.scroll-arrow {
+    display: block;
+    font-size: 2rem;
+    color: #fff;
+    opacity: 0.8;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+/* Responsive - Tablet */
+@media (max-width: 900px) {
+    .hero {
+        min-height: 400px;
+        height: 60vh;
+        background-attachment: scroll; /* Desactivar parallax en móvil */
+    }
+
+    .hero-inner {
+        padding: 40px 30px;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hero-features {
+        gap: 16px;
+    }
+
+    .feature-item {
+        font-size: 0.85rem;
+        padding: 8px 16px;
+    }
+}
+
+/* Responsive - Mobile */
 @media (max-width: 600px) {
-  /* Sobrescribe el ancho del contenedor (aplicado a .main-content) */
+    .hero {
+        min-height: 500px;
+        height: auto;
+    }
+
+    .hero-inner {
+        padding: 40px 20px;
+    }
+
+    .hero-badge {
+        font-size: 0.8rem;
+        padding: 6px 16px;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-title-line1 {
+        font-size: 0.9em;
+        letter-spacing: 2px;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 28px;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 32px;
+    }
+
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        max-width: 300px;
+        padding: 14px 28px;
+        font-size: 0.95rem;
+    }
+
+    .hero-features {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .feature-item {
+        width: 100%;
+        max-width: 250px;
+        justify-content: center;
+    }
+
+    .hero-scroll-indicator {
+        bottom: 20px;
+    }
+
+    /* Sobrescribe el ancho del contenedor (aplicado a .main-content) */
     .main-content {
         width: 100%; /* Ocupa todo el ancho */
         max-width: none; /* Asegura que la restricción de 1200px no aplique */
@@ -936,11 +1245,11 @@ main {
         margin: 0; /* Sin márgenes laterales */
     }
 
-  /* Hace la fuente h1 más pequeña para móviles */
-  h1 {
-    font-size: 24px;
-    text-align: center;
-  }
+    /* Hace la fuente h1 más pequeña para móviles */
+    h1 {
+        font-size: 24px;
+        text-align: center;
+    }
 }
 /* ------------------------------------------- */
 
