@@ -1366,10 +1366,6 @@ main {
         max-height: 600px;
     }
     
-    .hero-img {
-        object-position: center center; /* Mantiene centrado en móvil */
-    }
-    
     /* Asegurar legibilidad en móvil */
     .hero-overlay {
         background: linear-gradient(
