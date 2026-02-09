@@ -691,48 +691,107 @@ main {
 }
 
 /* Hero styles */
-.hero-wrapper{ width: 100%; padding: 0; }
-.hero{
-    width: 100%; /* full width */
-    min-height: 360px; /* fallback; JS will set exact height between nav and footer */
-    background-image: url('hero1.png');
-    background-size: cover;
-    background-position: center;
-    border-radius: 0; /* flush with edges */
-    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+/* Hero styles - Optimizado para imagen del supermercado */
+.hero-wrapper { 
+    width: 100%; 
+    padding: 0; 
+}
+
+.hero {
+    width: 100%;
+    height: 65vh;
+    min-height: 400px;
+    max-height: 750px;
     position: relative;
     overflow: hidden;
+    background-color: #f38405;
 }
-.hero:before{ content:''; position:absolute; inset:0; background: linear-gradient(90deg, rgba(243,132,5,0.85), rgba(0,0,0,0.1)); mix-blend-mode: multiply; }
-.hero-inner{
-    position:absolute;
-    inset:0;
-    z-index:2;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    padding: 40px 60px;
-    color:#fff;
-    text-align:center;
-    /* Sombra de texto aplicada a todos los elementos del hero */
-    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
-}
-/* Ajustes concretos para elementos del hero para mejorar legibilidad */
-.hero-inner h1, .hero-inner p{ text-shadow: 0 2px 6px rgba(0,0,0,0.65); }
-.hero-inner h1{ font-size:48px; line-height:1; margin:0 0 8px; font-weight:700; letter-spacing:0.5px; }
-.hero-inner p{ margin:0 0 16px; font-size:18px; opacity:0.95; }
 
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+}
+
+/* Overlay para mejorar contraste del texto */
+.hero:before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(243, 132, 5, 0.5),
+        rgba(0, 0, 0, 0.3)
+    );
+    z-index: 1;
+}
+
+.hero-inner {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 60px;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-inner h1,
+.hero-inner p {
+    text-shadow: 
+        0 2px 6px rgba(0, 0, 0, 0.8),
+        0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.hero-inner h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin: 0 0 8px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.hero-inner p {
+    margin: 0 0 16px;
+    font-size: 18px;
+    opacity: 0.95;
+}
 
 @media (max-width: 900px){
-    /* On mobile provide a smaller minimum hero height while script adapts */
-    .hero{ min-height: 260px; }
-    .hero-inner{ padding: 20px; }
-    .hero-inner h1{ font-size:26px; }
+    .hero {
+        height: 55vh;
+        min-height: 350px;
+    }
+    
+    .hero-inner {
+        padding: 30px 20px;
+    }
+    
+    .hero-inner h1 {
+        font-size: 32px;
+    }
 }
 
 /* --- Nuevas Especificaciones en Mobile View --- */
 @media (max-width: 600px) {
+    .hero {
+        height: 50vh;
+        min-height: 320px;
+    }
+    
+    .hero-inner h1 {
+        font-size: 26px;
+    }
+    
+    .hero-inner p {
+        font-size: 16px;
+    }
+    
   /* Sobrescribe el ancho del contenedor (aplicado a .main-content) */
     .main-content {
         width: 100%; /* Ocupa todo el ancho */
