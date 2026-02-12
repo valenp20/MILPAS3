@@ -1084,7 +1084,7 @@ main {
     min-height: 500px;
     height: 70vh;
     max-height: 700px;
-    background-image: url('hero-fachada.jpg');
+    background-image: url('hero1.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Efecto parallax */
