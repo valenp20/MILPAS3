@@ -695,7 +695,7 @@ main {
 .hero{
     width: 100%; /* full width */
     min-height: 360px; /* fallback; JS will set exact height between nav and footer */
-    background-image: url('hero1.png');
+    background-image: url('hero-fachada.jpg');
     background-size: cover;
     background-position: center;
     border-radius: 0; /* flush with edges */
