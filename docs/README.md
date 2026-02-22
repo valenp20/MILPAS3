@@ -1,31 +1,13 @@
-# Proyecto `pagina`
+# MILPAS3
 
-El backend fue movido a la carpeta `backend/` para separar frontend y backend.
+Repositorio local del proyecto MILPAS3.
 
-Requisitos:
-- Node.js 14+
+Contenido:
+- `pagina/` — sitio estático y assets.
+- `pagina/backend/` — servidor y datos locales.
 
-Ejecución (PowerShell):
+Cómo continuar:
+1. Inicializar git (ya creado localmente).
+2. Crear repositorio remoto y ejecutar `git remote add origin <url>` y `git push -u origin main`.
 
-```powershell
-# Ve a la carpeta del backend
-cd "C:\Users\Valentina\Desktop\pagina\backend"
-
-# Instala dependencias
-npm install
-
-# Arranca el backend
-npm run start
-
-# Abre en el navegador:
-# http://localhost:3000/pagina.html
-
-# O prueba la API desde otro PowerShell:
-Invoke-RestMethod -Uri http://localhost:3000/api/products
-```
-
-Endpoints expuestos por el backend:
-- `GET /api/products` - lista de productos
-- `GET /api/products/:id` - detalle de un producto
-
-Los assets estáticos (HTML, CSS, imágenes) se sirven desde la carpeta raíz del proyecto, así que el backend debe ejecutarse desde `backend/` y servirá `../pagina.html` y demás archivos.
+Si quieres puedo crear el remoto en GitHub y hacer el push por ti (necesitaré que te autentiques o que me pases la URL del repo remoto).
