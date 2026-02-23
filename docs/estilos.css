@@ -1151,6 +1151,34 @@ main {
     animation: fadeInUp 1s ease-out;
 }
 
+/* Botón principal del hero (sustituye el texto) */
+.hero-cta-btn {
+    display: inline-block;
+    padding: 18px 36px;
+    background: linear-gradient(90deg,#f38405,#ff8a2b);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    border-radius: 999px;
+    box-shadow: 0 8px 30px rgba(243,132,5,0.25);
+    border: none;
+    text-decoration: none;
+    letter-spacing: 0.6px;
+    z-index: 4;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s;
+}
+
+.hero-cta-btn:hover,
+.hero-cta-btn:focus {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 40px rgba(243,132,5,0.32);
+    outline: none;
+}
+
+/* Asegurar que el contenido del hero esté por encima de overlays */
+.hero-inner * { position: relative; }
+
 /* Badge de "Desde 1969" */
 .hero-badge {
     display: inline-flex;
