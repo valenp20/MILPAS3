@@ -72,6 +72,7 @@
             <div class="hero-inner">
                 <h1>VEGETALES<br>SIEMPRE FRESCOS</h1>
                 <p>TENEMOS EL MEJOR SURTIDO DE VEGETALES FRESCOS PARA USTED</p>
+                <a href="#about" class="hero-cta-btn" aria-label="Ir a Quiénes Somos">Conócenos</a>
             </div>
         </section>
     </section>
@@ -776,6 +777,32 @@
                 mo.observe(container, { childList: true, subtree: true });
             });
         });
+    })();
+    </script>
+
+    <script>
+    (function(){
+        const btn = document.querySelector('.hero-cta-btn');
+        if (btn) {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (typeof setHomeMode === 'function') setHomeMode(false);
+                if (typeof toggleHero === 'function') toggleHero(false);
+                if (typeof showOnlySection === 'function') {
+                    showOnlySection('about');
+                } else {
+                    const about = document.getElementById('about');
+                    if (about) {
+                        about.style.display = 'block';
+                        try { about.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+                        catch (err) { about.scrollIntoView(); }
+                    }
+                    const hero = document.querySelector('.hero');
+                    if (hero) hero.style.display = 'none';
+                }
+                if (typeof hideProducts === 'function') hideProducts();
+            });
+        }
     })();
     </script>
 

@@ -903,33 +903,26 @@
     <script>
     (function(){
         const btn = document.querySelector('.hero-cta-btn');
-        if (!btn) return;
-        btn.addEventListener('click', function(e){
-            e.preventDefault();
-            const about = document.getElementById('about');
-            const hero = document.querySelector('.hero');
-            const main = document.querySelector('main');
-
-            if (about) {
-                about.style.display = 'block';
-                try { about.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
-                catch (err) { about.scrollIntoView(); }
-            }
-
-            if (hero) {
-                hero.style.display = 'none';
-                // Ajustar altura mínima del main para evitar saltos
-                const headerH = document.querySelector('.main-header') ? document.querySelector('.main-header').getBoundingClientRect().height : 0;
-                const navH = document.querySelector('.main-nav') ? document.querySelector('.main-nav').getBoundingClientRect().height : 0;
-                const footerH = document.querySelector('.main-footer') ? document.querySelector('.main-footer').getBoundingClientRect().height : 0;
-                if (main) main.style.minHeight = Math.max(220, window.innerHeight - headerH - navH - footerH) + 'px';
-            }
-
-            // Actualizar estado del menú
-            document.querySelectorAll('#nav-links a').forEach(a=>a.classList.remove('active'));
-            const aboutLink = document.querySelector('#nav-links a[data-category="About"]');
-            if (aboutLink) aboutLink.classList.add('active');
-        });
+        if (btn) {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (typeof setHomeMode === 'function') setHomeMode(false);
+                if (typeof toggleHero === 'function') toggleHero(false);
+                if (typeof showOnlySection === 'function') {
+                    showOnlySection('about');
+                } else {
+                    const about = document.getElementById('about');
+                    if (about) {
+                        about.style.display = 'block';
+                        try { about.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+                        catch (err) { about.scrollIntoView(); }
+                    }
+                    const hero = document.querySelector('.hero');
+                    if (hero) hero.style.display = 'none';
+                }
+                if (typeof hideProducts === 'function') hideProducts();
+            });
+        }
     })();
     </script>
 
