@@ -59,7 +59,10 @@
         <section class="hero">
                 <!-- Imagen de hero: sustituida por la imagen proporcionada "fondo-1.jpg" -->
                 <!-- Archivo esperado: docs/fondo-1.jpg (o coloca en la misma carpeta donde está este HTML) -->
-                <img class="hero-bg" src="fondo-1.jpg" alt="" aria-hidden="true" loading="eager" decoding="async">
+                    <picture>
+                        <source type="image/webp" srcset="images/fondo-480.webp 480w, images/fondo-768.webp 768w, images/fondo-1024.webp 1024w, images/fondo-1440.webp 1440w, images/fondo-1920.webp 1920w" sizes="100vw">
+                        <img class="hero-bg" src="images/fondo-1920-large.jpg" srcset="images/fondo-480.jpg 480w, images/fondo-768.jpg 768w, images/fondo-1024.jpg 1024w, images/fondo-1440.jpg 1440w, images/fondo-1920.jpg 1920w" sizes="100vw" alt="Entrada de Supermercados Cuatro Milpas" aria-hidden="true" loading="eager" decoding="async">
+                    </picture>
             <div class="hero-inner">
                 <h1>VEGETALES<br>SIEMPRE FRESCOS</h1>
                 <p>TENEMOS EL MEJOR SURTIDO DE VEGETALES FRESCOS PARA USTED</p>
