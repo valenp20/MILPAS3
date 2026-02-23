@@ -1086,15 +1086,29 @@ main {
     min-height: 500px;
     height: 70vh;
     max-height: 700px;
-    background-image: url('hero1.png');
+    /* Ahora usamos una etiqueta <img> posicionada (class .hero-bg) para soportar mejor JPEGs y object-fit */
+    background-image: none;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Efecto parallax */
+    background-repeat: no-repeat;
     position: relative;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* Imagen de fondo colocada dentro del DOM para control responsive y mejor compatibilidad JPEG */
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+    z-index: 0;
+    filter: contrast(1.03) saturate(1.02);
 }
 
 /* Overlay oscuro mejorado con gradiente */
