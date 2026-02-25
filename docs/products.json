@@ -207,5 +207,77 @@
     "category": "Granos y Cereales",
     "description": "Comienza tu mañana con el crujiente perfecto y la dulzura ideal de nuestras hojuelas de maíz azucaradas, diseñadas para darte energía en cada cucharada.",
     "price": "$4.450"
+  } ,
+  {
+    "id": 28,
+    "name": "Avena Hojuelas Unidos x250gr",
+    "image": "productos/avenaunidosx250gr.png",
+    "category": "Granos y Cereales",
+    "description": "Inicia tus mañanas con la pureza de la avena en hojuelas Unidos, diseñada para brindarte saciedad y bienestar en una práctica presentación.\"",
+    "price": "$3.000"
+  },
+  {
+    "id": 29,
+    "name": "Cereal Granola x300g",
+    "image": "productos/cerealgranolax300gr.png",
+    "category": "Granos y Cereales",
+    "description": "La mezcla perfecta de hojuelas, frutos secos y un toque crujiente en una presentación de 300g, ideal para recargar tus mañanas de energía natural.\"",
+    "price": "$6.100"
+  },
+  {
+    "id": 31,
+    "name": "Cereal Chocobolitas x200g",
+    "image": "productos/cerealchocobolitasx200gr.png",
+    "category": "Granos y Cereales",
+    "description": "Explosión de sabor a chocolate en cada bocado con nuestras crujientes esferas de cereal, el desayuno más divertido para los amantes del cacao.",
+    "price": "$4.600"
+  },
+  {
+    "id": 32,
+    "name": "Cereal Aros Frutales x500gr",
+    "image": "productos/cerealarosfrutax500gr.png",
+    "category": "Granos y Cereales",
+    "description": "Explosión de sabores frutales y colores vibrantes en cada bocado, convirtiendo el desayuno en el momento más divertido y delicioso del día.",
+    "price": "$9.800"
+  },
+  {
+    "id": 33,
+    "name": "Cereal Arroz Achocolatado x200gr",
+    "image": "productos/cerealarrozchocox200gr.png",
+    "category": "Granos y Cereales",
+    "description": "Crujientes granos de arroz tostado con una deliciosa cobertura de chocolate que transforma la leche en una chocolatada irresistible.",
+    "price": "$4.500"
+  },
+  {
+    "id": 34,
+    "name": "Cereal Arroz Achocolatado x500gr",
+    "image": "productos/cerealarrozchocox500gr.png",
+    "category": "Granos y Cereales",
+    "description": "Crujientes granos de arroz tostado con una deliciosa cobertura de chocolate que transforma la leche en una chocolatada irresistible.",
+    "price": "$9.800"
+  },
+  {
+    "id": 35,
+    "name": "Cereal Lonchera Unidos x6",
+    "image": "productos/cerealoncherax6.png",
+    "category": "Granos y Cereales",
+    "description": "La solución perfecta para el recreo: 6 paquetes individuales con la porción ideal de cereal para que los niños disfruten de un snack nutritivo y crujiente en el colegio.",
+    "price": "$6.050"
+  },
+  {
+    "id": 36,
+    "name": "Limpiapisos Citrocanela Unidos x1000ml",
+    "image": "productos/limpiapisoscanelax1000ml.png",
+    "category": "Limpieza",
+    "description": "Transforma tu hogar con la mezcla perfecta de notas cítricas y el toque acogedor de la canela, dejando tus pisos impecables y con un aroma duradero.",
+    "price": "$3.100"
+  },
+  {
+    "id": 37,
+    "name": "Detergente Unidos para Ropa Oscura",
+    "image": "productos/detergenteropaoscurax2000.png",
+    "category": "Limpieza",
+    "description": "Protege la intensidad de tus prendas favoritas con nuestra fórmula especializada que evita el desgaste de los tonos oscuros y negros, lavada tras lavada.",
+    "price": "$14.800"
   }
 ]
