@@ -429,69 +429,177 @@
                         const searchInput = document.querySelector('.search-bar input');
                         const searchButton = document.querySelector('.search-bar button');
                         let searchTimeout = null;
-                        
+
                         if (!searchInput || !searchButton) return;
-                        
-                        function performSearch() {
-                            const searchTerm = searchInput.value.trim().toLowerCase();
+
+                        function enterSearchMode() {
+                            const heroWrapper = document.querySelector('.hero-wrapper');
+                            if (heroWrapper) heroWrapper.style.display = 'none';
+                            const heroEl = document.querySelector('.hero');
+                            if (heroEl) heroEl.style.display = 'none';
+
+                            ['about', 'contacto', 'metodos'].forEach(id => {
+                                const el = document.getElementById(id);
+                                if (el) el.style.display = 'none';
+                            });
+
+                            document.querySelectorAll('.featured-products .section-column').forEach(c => c.style.display = 'none');
+                            document.querySelectorAll('.section-column').forEach(c => c.style.display = 'none');
+
+                            window.isHomeMode = false;
+
+                            const mainEl = document.querySelector('main');
+                            const headerEl = document.querySelector('.main-header');
+                            const navEl = document.querySelector('.main-nav');
+                            const footerEl = document.querySelector('.main-footer');
+                            if (mainEl) {
+                                const headerH = headerEl ? headerEl.getBoundingClientRect().height : 0;
+                                const navH = navEl ? navEl.getBoundingClientRect().height : 0;
+                                const footerH = footerEl ? footerEl.getBoundingClientRect().height : 0;
+                                const space = Math.max(300, window.innerHeight - headerH - navH - footerH);
+                                mainEl.style.minHeight = space + 'px';
+                            }
+                        }
+
+                        function exitSearchMode() {
+                            const heroWrapper = document.querySelector('.hero-wrapper');
+                            if (heroWrapper) heroWrapper.style.display = '';
+                            const heroEl = document.querySelector('.hero');
+                            if (heroEl) heroEl.style.display = '';
+
+                            const mainEl = document.querySelector('main');
+                            if (mainEl) mainEl.style.minHeight = '';
+
+                            const container = document.getElementById('product-carousel');
+                            if (container) { container.style.display = 'none'; container.innerHTML = ''; }
                             const titleEl = document.getElementById('category-title');
-                            
+                            if (titleEl) { titleEl.style.display = 'none'; titleEl.textContent = ''; }
+                            const banner = document.getElementById('search-results-banner');
+                            if (banner) banner.remove();
+
+                            window.isHomeMode = false;
+                        }
+
+                        function showSearchBanner(term, count) {
+                            let banner = document.getElementById('search-results-banner');
+                            if (!banner) {
+                                banner = document.createElement('div');
+                                banner.id = 'search-results-banner';
+                                banner.style.cssText = `
+                                    background: linear-gradient(135deg, #1565C0 0%, #0b63b8 100%);
+                                    color: #fff;
+                                    padding: 18px 28px;
+                                    margin: 18px 20px 0 20px;
+                                    border-radius: 12px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    gap: 12px;
+                                    box-shadow: 0 4px 18px rgba(21,101,192,0.18);
+                                    animation: searchBannerIn 0.25s ease;
+                                `;
+                                const main = document.querySelector('main');
+                                const carousel = document.getElementById('product-carousel');
+                                if (main && carousel) main.insertBefore(banner, carousel);
+                            }
+                            banner.innerHTML = '';
+
+                            const infoDiv = document.createElement('div');
+                            infoDiv.style.cssText = 'display:flex;align-items:center;gap:10px;';
+
+                            const emoji = document.createElement('span');
+                            emoji.style.fontSize = '1.5rem';
+                            emoji.textContent = count > 0 ? '🔍' : '😕';
+
+                            const textDiv = document.createElement('div');
+                            const titleLine = document.createElement('div');
+                            titleLine.style.cssText = 'font-size:1.05rem;font-weight:700;';
+                            const titleText = document.createTextNode(count > 0 ? 'Resultados para: ' : 'Sin resultados para: ');
+                            const termEm = document.createElement('em');
+                            termEm.style.color = '#ffd23b';
+                            termEm.textContent = '"' + term + '"';
+                            titleLine.appendChild(titleText);
+                            titleLine.appendChild(termEm);
+
+                            const subtitleLine = document.createElement('div');
+                            subtitleLine.style.cssText = 'font-size:0.88rem;opacity:0.85;margin-top:2px;';
+                            subtitleLine.textContent = count > 0
+                                ? count + ' producto' + (count !== 1 ? 's' : '') + ' encontrado' + (count !== 1 ? 's' : '')
+                                : 'Intenta con otro término de búsqueda';
+
+                            textDiv.appendChild(titleLine);
+                            textDiv.appendChild(subtitleLine);
+                            infoDiv.appendChild(emoji);
+                            infoDiv.appendChild(textDiv);
+
+                            const clearBtn = document.createElement('button');
+                            clearBtn.textContent = '✕ Limpiar';
+                            clearBtn.style.cssText = 'background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);color:#fff;border-radius:8px;padding:6px 14px;cursor:pointer;font-size:0.85rem;transition:background 0.2s;';
+                            clearBtn.addEventListener('mouseover', () => { clearBtn.style.background = 'rgba(255,255,255,0.28)'; });
+                            clearBtn.addEventListener('mouseout', () => { clearBtn.style.background = 'rgba(255,255,255,0.15)'; });
+                            clearBtn.addEventListener('click', () => {
+                                searchInput.value = '';
+                                searchInput.dispatchEvent(new Event('input'));
+                            });
+
+                            banner.appendChild(infoDiv);
+                            banner.appendChild(clearBtn);
+                        }
+
+                        function performSearch() {
+                            const searchTerm = searchInput.value.trim();
+                            const searchTermLower = searchTerm.toLowerCase();
+
                             if (!searchTerm) {
-                                // Si se borra la búsqueda, limpiar resultados y ocultar el carousel
-                                renderProducts([]);
-                                if (titleEl) titleEl.style.display = 'none';
-                                hideProducts();
+                                const banner = document.getElementById('search-results-banner');
+                                if (banner) banner.remove();
+                                exitSearchMode();
                                 return;
                             }
-                            
-                            // Asegurar que estamos en modo búsqueda (no home mode)
-                            window.isHomeMode = false;
-                            
+
+                            enterSearchMode();
+
                             const filtered = allProducts.filter(p => {
                                 const name = String(p.name || '').toLowerCase();
                                 const category = String(p.category || '').toLowerCase();
                                 const description = String(p.description || '').toLowerCase();
-                                
-                                return name.includes(searchTerm) || 
-                                       category.includes(searchTerm) || 
-                                       description.includes(searchTerm);
+                                return name.includes(searchTermLower) ||
+                                       category.includes(searchTermLower) ||
+                                       description.includes(searchTermLower);
                             });
-                            
-                            // Ocultar secciones de información (about, contacto, metodos) y el hero
-                            if (typeof hideInfoSections === 'function') hideInfoSections();
-                            if (typeof toggleHero === 'function') toggleHero(false);
-                            
-                            if (titleEl) {
-                                if (filtered.length > 0) {
-                                    titleEl.textContent = `RESULTADOS DE BÚSQUEDA: "${searchInput.value.trim()}" (${filtered.length})`;
-                                    titleEl.style.display = 'block';
-                                } else {
-                                    titleEl.textContent = `NO SE ENCONTRARON RESULTADOS PARA: "${searchInput.value.trim()}"`;
-                                    titleEl.style.display = 'block';
-                                }
-                            }
-                            
+
+                            showSearchBanner(searchTerm, filtered.length);
                             renderProducts(filtered);
-                            showProducts();
+
+                            const container = document.getElementById('product-carousel');
+                            if (container) {
+                                container.style.display = filtered.length > 0 ? '' : 'none';
+                                container.style.animation = 'none';
+                                container.offsetHeight; // force reflow to restart CSS animation
+                                container.style.animation = '';
+                            }
+
+                            const titleEl = document.getElementById('category-title');
+                            if (titleEl) titleEl.style.display = 'none';
                         }
-                        
+
                         searchButton.addEventListener('click', (e) => {
                             e.preventDefault();
                             performSearch();
                         });
-                        
+
                         searchInput.addEventListener('keypress', (e) => {
                             if (e.key === 'Enter') {
                                 e.preventDefault();
                                 performSearch();
                             }
                         });
-                        
+
                         searchInput.addEventListener('input', () => {
                             clearTimeout(searchTimeout);
                             searchTimeout = setTimeout(() => {
                                 performSearch();
-                            }, 500);
+                            }, 350);
                         });
                     }
                

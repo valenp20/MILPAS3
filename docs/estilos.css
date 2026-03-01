@@ -1843,3 +1843,23 @@ main > .main-content { padding-bottom: 0; }
         grid-template-columns: 1fr;
     }
 }
+
+
+/* ===== BÚSQUEDA PROFESIONAL ===== */
+@keyframes searchBannerIn {
+    from { opacity: 0; transform: translateY(-12px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+#search-results-banner {
+    animation: searchBannerIn 0.25s ease;
+}
+
+/* Animación de entrada para productos en búsqueda */
+.search-mode .producto {
+    animation: productFadeIn 0.3s ease both;
+}
+@keyframes productFadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
