@@ -351,13 +351,15 @@
                             const titleEl = document.getElementById('category-title');
                             
                             if (!searchTerm) {
-                                renderProducts(allProducts);
-                                if (titleEl) {
-                                    titleEl.style.display = 'none';
-                                }
-                                showProducts();
+                                // Si se borra la búsqueda, limpiar resultados y ocultar el carousel
+                                renderProducts([]);
+                                if (titleEl) titleEl.style.display = 'none';
+                                hideProducts();
                                 return;
                             }
+                            
+                            // Asegurar que estamos en modo búsqueda (no home mode)
+                            window.isHomeMode = false;
                             
                             const filtered = allProducts.filter(p => {
                                 const name = String(p.name || '').toLowerCase();
@@ -369,6 +371,10 @@
                                        description.includes(searchTerm);
                             });
                             
+                            // Ocultar secciones de información (about, contacto, metodos) y el hero
+                            if (typeof hideInfoSections === 'function') hideInfoSections();
+                            if (typeof toggleHero === 'function') toggleHero(false);
+                            
                             if (titleEl) {
                                 if (filtered.length > 0) {
                                     titleEl.textContent = `RESULTADOS DE BÚSQUEDA: "${searchInput.value.trim()}" (${filtered.length})`;
@@ -379,7 +385,6 @@
                                 }
                             }
                             
-                            hideInfoSections();
                             renderProducts(filtered);
                             showProducts();
                         }
