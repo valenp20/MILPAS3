@@ -577,9 +577,8 @@
                             { text: 'INICIO', action: () => { if (typeof showHome === 'function') { showHome(); } if (typeof showProducts === 'function') showProducts(); } },
                             { text: 'QUIENES SOMOS', action: () => { if (typeof setHomeMode === 'function') setHomeMode(false); if (typeof toggleHero === 'function') toggleHero(false); if (typeof showOnlySection === 'function') showOnlySection('about'); if (typeof hideProducts === 'function') hideProducts(); } },
                             { text: 'CONTACTANOS', action: () => { if (typeof setHomeMode === 'function') setHomeMode(false); if (typeof toggleHero === 'function') toggleHero(false); if (typeof showOnlySection === 'function') showOnlySection('contacto'); if (typeof hideProducts === 'function') hideProducts(); } },
-                            { text: 'MEDIOS DE PAGO', action: () => { if (typeof setHomeMode === 'function') setHomeMode(false); if (typeof toggleHero === 'function') toggleHero(false); if (typeof showOnlySection === 'function') showOnlySection('metodos'); if (typeof hideProducts === 'function') hideProducts(); } },
-                            { text: 'POLÍTICA DE PRIVACIDAD', action: () => { const footer = document.querySelector('.main-footer'); if (footer) footer.scrollIntoView({behavior:'smooth'}); } },
-                            { text: 'FAQ', action: () => { const footer = document.querySelector('.main-footer'); if (footer) footer.scrollIntoView({behavior:'smooth'}); } }
+                            { text: 'MEDIOS DE PAGO', action: () => { if (typeof setHomeMode === 'function') setHomeMode(false); if (typeof toggleHero === 'function') toggleHero(false); if (typeof showOnlySection === 'function') showOnlySection('metodos'); if (typeof hideProducts === 'function') hideProducts(); } }
+
                         ];
 
                         items.forEach(it => {
