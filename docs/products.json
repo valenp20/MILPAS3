@@ -405,5 +405,75 @@
     "category": "Enlatados",
     "description": "Disfruta de la suavidad y el sabor superior de nuestros lomitos de atún sumergidos en aceite de girasol, perfectos para quienes buscan una textura más jugosa en sus platos"
   }
-  
+  ,
+  {
+    "id": 55,
+    "name": "Café Unidos x500g",
+    "image": "productos/cafeunidosx500g.png",
+    "category": "Bebidas",
+    "description": "Despierta tus sentidos con el aroma intenso y el sabor equilibrado de nuestro café 100% puro, tostado y molido para brindar la frescura del campo directamente a tu taza"
+  },
+  {
+    "id": 56,
+    "name": "Café Liofilizado Unidos x85g",
+    "image": "productos/cafeliofilizado85g.png",
+    "category": "Bebidas",
+    "description": "Disfruta de la excelencia de un café premium procesado con tecnología de liofilización, que conserva intactos el aroma, el sabor y las propiedades naturales del grano."
+  },
+  {
+    "id": 57,
+    "name": "Agua Pura Unidos x600ml",
+    "image": "productos/aguapurax600.png",
+    "category": "Bebidas",
+    "description": "Hidrata tu cuerpo con la pureza y frescura natural de nuestra agua mineralizada, procesada bajo los más altos estándares para brindarte una sensación revitalizante en cada sorbo"
+  },
+  {
+    "id": 58,
+    "name": "Uvas Pasas Unidos x200g",
+    "image": "productos/uvaspasasx200.png",
+    "category": "Frutos Secos",
+    "description": "Uvas pasas de alta calidad en una práctica presentación de 200g, cuidadosamente seleccionadas para garantizar frescura y dulzura natural en cada bocado."
+  },
+  {
+    "id": 59,
+    "name": "Arándanos Deshidratados Unidos x100g",
+    "image": "productos/arandanosx100.png",
+    "category": "Frutos Secos",
+    "description": "Disfruta de la frescura de la fruta en una práctica presentación de 100g, perfecta para llevar como snack nutritivo y delicioso a cualquier lugar."
+  },
+  {
+    "id": 60,
+    "name": "Maní Tostado Unidos x50g",
+    "image": "productos/manix50g.png",
+    "category": "Frutos Secos",
+    "description": "Recarga tus energías con una fuente natural de proteína y fibra, cuidadosamente tostada para resaltar su sabor auténtico y acompañarte en tu día a día."
+  },
+  {
+    "id": 61,
+    "name": "Maní con Uvas Pasas Unidos x50gr",
+    "image": "productos/maniconpasasx50g.png",
+    "category": "Frutos Secos",
+    "description": "Disfruta del contraste perfecto entre lo crujiente del maní tostado y la dulzura natural de las uvas pasas, creando un snack equilibrado y delicioso para cualquier momento del día."
+  },
+  {
+    "id": 62,
+    "name": "Maní con Ajonjolí Unidos x50g",
+    "image": "productos/maniconajonjolix50g.png",
+    "category": "Frutos Secos",
+    "description": "Disfruta de una explosión de texturas con nuestro maní tostado recubierto de crujientes semillas de ajonjolí, el snack perfecto para quienes buscan un sabor diferente y delicioso."
+  },
+  {
+    "id": 63,
+    "name": "Coco Deshidratado Unidos x200gr",
+    "image": "productos/cocounidosx200gr.png",
+    "category": "Frutos Secos",
+    "description": "El ingrediente esencial para tus recetas dulces y saladas; coco finamente seleccionado y deshidratado para garantizar una textura perfecta y una frescura duradera en tu despensa."
+  },
+  {
+    "id": 64,
+    "name": "Maní Dulce Unidos x50gr",
+    "image": "productos/manidulcex50gr.png",
+    "category": "Frutos Secos",
+    "description": "Maní seleccionado de alta calidad, recubierto con una crujiente capa dulce que garantiza frescura y un sabor auténtico en un empaque práctico para llevar a todas partes."
+  }
 ]
