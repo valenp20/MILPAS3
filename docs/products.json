@@ -353,28 +353,28 @@
     "id": 47,
     "name": "Super Combo Panadería Unidos x1000g",
     "image": "productos/combopanx1000.png",
-    "category": "Panadería",
+    "category": "Panaderia",
     "description": "Resuelve todas tus comidas con el Súper Combo Unidos, la combinación perfecta de panadería fresca y variada que te ofrece versatilidad desde el desayuno hasta la cena."
   },
   {
     "id": 48,
     "name": "Tostadas Unidos x10und",
     "image": "productos/tostadasunidosx10.png",
-    "category": "Panadería",
+    "category": "Panaderia",
     "description": "El acompañamiento ideal para tus mermeladas, quesos o bebidas calientes; tostadas de alta calidad con el toque dorado perfecto que a todos en casa les encanta."
   },
   {
     "id": 49,
     "name": "Pan Redondo Unidos x15und",
     "image": "productos/panredondo15.png",
-    "category": "Panadería",
+    "category": "Panaderia",
     "description": "El acompañamiento ideal para tus comidas, perfecto para preparar mini sándwiches o disfrutar untado con mantequilla y mermelada en cualquier momento del día."
   },
   {
     "id": 50,
     "name": "Pan para Hamburguesa Unidos x500g",
     "image": "productos/panhamburgx500g.png",
-    "category": "Panadería",
+    "category": "Panaderia",
     "description": "Pan esponjoso y de gran tamaño, diseñado con la consistencia ideal para sostener todos tus ingredientes favoritos sin perder su forma ni suavidad."
   }
   
