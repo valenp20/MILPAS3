@@ -32,7 +32,7 @@
     "id": 5,
     "name": "Almendra Natural Unidos x100gr",
     "image": "productos/almendrax100.png",
-    "category": "Frutos secos",
+    "category": "Frutos Secos",
     "description": "Toda la frescura y el poder antioxidante de la almendra natural en un empaque de 100g listo para llevar a donde quieras."
   
   },
@@ -71,7 +71,7 @@
   },
   {
   "id": 10,
-    "name": "Margarina en Barra Unidos x125gr "
+    "name": "Margarina en Barra Unidos x125gr ",
     "image": "productos/margarina_enbarraunidosx125grcx80.png",
     "category": "Aceites y Untables",
     "description": "La barra de 125g ideal para untar o cocinar, ofreciendo la consistencia perfecta y ese sabor tradicional que transforma tus desayunos."
@@ -105,7 +105,7 @@
   "id": 14,
     "name": "Aceite Giralsol Unidos x3000ml",
     "image": "productos/aceitegirasolunidosx3000.png",
-    "category": "Aceites Y Untables",
+    "category": "Aceites y Untables",
     "description": "Máxima durabilidad y resistencia al calor en una botella de 3 litros, diseñada para quienes cocinan en grande con la confianza de siempre."
   
   },
@@ -122,7 +122,7 @@
     "name": "Leche UHT Entera Unidos x1100ml",
     "image": "productos/lecheenterax1100ml.png",
     "category": "Lácteos",
-    "description": "Toda la pureza y el valor nutricional de la leche del campo en una presentación de 1100ml con proceso UHT para mayor duración y frescura."
+    "description": "Toda la pureza y el valor nutricional de la leche del campo en una presentación de 1100ml con proceso UHT para mayor duración y frescura.",
     "price": "$4.150"
   },
   {
@@ -202,7 +202,7 @@
     "name": "Cereal Hojuelas Azucaradas x200gr",
     "image": "productos/hojuelasazucaradasx200gr.png",
     "category": "Granos y Cereales",
-    "description": "Comienza tu mañana con el crujiente perfecto y la dulzura ideal de nuestras hojuelas de maíz azucaradas, diseñadas para darte energía en cada cucharada.",
+    "description": "Comienza tu mañana con el crujiente perfecto y la dulzura ideal de nuestras hojuelas de maíz azucaradas, diseñadas para darte energía en cada cucharada."
     
   } ,
   {
@@ -298,7 +298,7 @@
     "name": "Bolsa Basura Papelera Unidos",
     "image": "productos/bolsapapeleraunidos.png",
     "category": "Limpieza",
-    "description": "Bolsa Papelera Blanca\n43x45cm x10und",
+    "description": "Bolsa Papelera Blanca\n43x45cm x10und"
   
   },
   {
@@ -353,7 +353,7 @@
     "id": 47,
     "name": "Super Combo Panadería Unidos x1000g",
     "image": "productos/combopanx1000.png",
-    "category": "Panaderia",
+    "category": "Panadería",
     "description": "Resuelve todas tus comidas con el Súper Combo Unidos, la combinación perfecta de panadería fresca y variada que te ofrece versatilidad desde el desayuno hasta la cena."
   },
   {
@@ -367,14 +367,14 @@
     "id": 49,
     "name": "Pan Redondo Unidos x15und",
     "image": "productos/panredondo15.png",
-    "category": "Panaderia",
+    "category": "Panadería",
     "description": "El acompañamiento ideal para tus comidas, perfecto para preparar mini sándwiches o disfrutar untado con mantequilla y mermelada en cualquier momento del día."
   },
   {
     "id": 50,
     "name": "Pan para Hamburguesa Unidos x500g",
     "image": "productos/panhamburgx500g.png",
-    "category": "Panaderia",
+    "category": "Panadería",
     "description": "Pan esponjoso y de gran tamaño, diseñado con la consistencia ideal para sostener todos tus ingredientes favoritos sin perder su forma ni suavidad."
   }
   

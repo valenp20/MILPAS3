@@ -36,12 +36,15 @@
             <li class="products-parent">
                 <a href="#" id="products-link">NUESTROS PRODUCTOS ▾</a>
                 <ul class="products-submenu" aria-hidden="true">
-                    <li><a href="#" data-category="Lácteos">LACTEOS</a></li>
-                    <li><a href="#" data-category="Frutas">FRUTAS Y VERDURAS</a></li>
-                    <li><a href="#" data-category="Carnes">CARNES</a></li>
-                    <li><a href="#" data-category="Aseo">ASEO</a></li>
-                    <li><a href="#" data-category="Hogar">HOGAR</a></li>
-                    <li><a href="#" data-category="Despensa">DESPENSA</a></li>
+                    <li><a href="#" data-category="Lácteos">LÁCTEOS</a></li>
+                    <li><a href="#" data-category="Aceites y Untables">ACEITES Y UNTABLES</a></li>
+                    <li><a href="#" data-category="Frutos Secos">FRUTOS SECOS</a></li>
+                    <li><a href="#" data-category="Limpieza">LIMPIEZA</a></li>
+                    <li><a href="#" data-category="Dulces y Postres">DULCES Y POSTRES</a></li>
+                    <li><a href="#" data-category="Aseo Personal">ASEO PERSONAL</a></li>
+                    <li><a href="#" data-category="Panadería">PANADERÍA</a></li>
+                    <li><a href="#" data-category="Granos y Cereales">GRANOS Y CEREALES</a></li>
+                    <li><a href="#" data-category="Bebidas">BEBIDAS</a></li>
                 </ul>
             </li>
             <li><a href="#contacto" data-category="Contact">CONTACTANOS</a></li>
@@ -228,7 +231,7 @@
     <script>
         async function loadProducts() {
             try {
-                const res = await fetch('/api/products');
+                const res = await fetch('products.json');
                 if (!res.ok) throw new Error('Error al obtener productos');
                 const products = await res.json();
                 const container = document.getElementById('product-carousel');
@@ -550,7 +553,7 @@
                 
                 async function fetchAllProducts(){
                     try{
-                        const res = await fetch('/api/products');
+                        const res = await fetch('products.json');
                         if (!res.ok) throw new Error('Error al obtener productos');
                         allProducts = await res.json();
                         renderProducts(allProducts);
