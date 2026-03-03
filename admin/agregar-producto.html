@@ -135,7 +135,7 @@
             image: document.getElementById('productImage').value.trim(),
             category: document.getElementById('productCategory').value,
             description: document.getElementById('productDescription').value.trim(),
-            price: document.getElementById('productPrice').value.trim()
+         
         };
         const jsonOutput = ',\n  ' + JSON.stringify(formData, null, 2).replace(/\n/g, '\n  ');
         document.getElementById('jsonPreview').textContent = jsonOutput;
