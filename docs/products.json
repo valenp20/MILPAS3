@@ -5,7 +5,6 @@
     "image": "productos/leche_unidos_azucarada.png",
     "category": "Lácteos",
     "description": "Leche fresca azucarada de la marca Unidos, ideal para el desayuno.",
-    "price": "$3.500"
   },
   {
     "id": 2,
@@ -13,7 +12,7 @@
     "image": "productos/aceiteunidosx1000ml.png",
     "category": "Aceites y Untables",
     "description": "Aceite vegetal de alta calidad, perfecto para cocinar.",
-    "price": "$5.200"
+   
   },
   {
     "id": 3,
@@ -21,7 +20,6 @@
     "image": "productos/margarinaunidos_consal_x1000gr.png",
     "category": "Aceites y Untables",
     "description": "Margarina con sal, excelente para untar en panes y repostería.",
-    "price": "$4.100"
   },
   {
     "id": 4,
@@ -29,7 +27,6 @@
     "image": "productos/agua.png",
     "category": "Bebidas",
     "description": "Un litro de pureza cristalina diseñado para mantener tu energía y bienestar en cada gota.",
-    "price": "$850"
   },
   {
     "id": 5,
@@ -37,7 +34,7 @@
     "image": "productos/almendrax100.png",
     "category": "Frutos secos",
     "description": "Toda la frescura y el poder antioxidante de la almendra natural en un empaque de 100g listo para llevar a donde quieras.",
-    "price": "$6.700"
+  
   },
   {
     "id": 6,
@@ -45,7 +42,7 @@
     "image": "productos/arequipex200.png",
     "category": "Dulces y Postres",
     "description": "Date un gusto irresistible con nuestro arequipe natural de 200g, elaborado tradicionalmente para fundirse en tu paladar.",
-    "price": "$4.950"
+
   },
    {
     "id": 7,
@@ -53,7 +50,7 @@
     "image": "productos/salsadetomateunidosx400.png",
     "category": "Aceites y Untables",
     "description": "Lleva a tu mesa el sabor clásico y casero con nuestra salsa de tomate natural de 400g, elaborada para dar ese toque especial que a todos les encanta.",
-    "price": "$6.200"
+
      
   },
   {
@@ -62,7 +59,7 @@
     "image": "productos/salsatomateunidosx200grcx24.png",
     "category": "Aceites y Untables",
     "description": "Dale a tus platos ese toque casero e irresistible con nuestra salsa de tomate natural, la aliada ideal para tus recetas favoritas.",
-    "price": "$3.950"
+
   },
   {
     "id": 9,
@@ -70,7 +67,7 @@
     "image": "productos/margarina_edicionespecialx1000gr.png",
     "category": "Aceites y Untables",
     "description": "Descubre el sabor superior de nuestra Edición Especial: una margarina de 100g con cremosidad única y el toque de sal ideal para tus momentos gourmet.",
-    "price": "$18.050"
+ 
   },
   {
   "id": 10,
@@ -78,7 +75,7 @@
     "image": "productos/margarina_enbarraunidosx125grcx80.png",
     "category": "Aceites y Untables",
     "description": "La barra de 125g ideal para untar o cocinar, ofreciendo la consistencia perfecta y ese sabor tradicional que transforma tus desayunos.",
-    "price": "$1.950"
+    
   },
   {
   "id": 11,
@@ -86,7 +83,7 @@
     "image": "productos/margarinaunidosx250.png",
     "category": "Aceites y Untables",
     "description": "La medida perfecta de 250g para el uso diario en el hogar, brindando cremosidad y un sabor inigualable a todas tus comidas.",
-    "price": "$5.550"
+   
   },
   {
   "id": 12,
@@ -94,7 +91,7 @@
     "image": "productos/mayonesaunidosx200gr.png",
     "category": "Aceites y Untables",
     "description": "Disfruta de la textura más suave y cremosa en esta práctica presentación de 200g, el toque final perfecto para tus recetas favoritas",
-    "price": "$3.600"
+ 
   },
   {
   "id": 13,
@@ -102,7 +99,7 @@
     "image": "productos/mayonesaunidosx380gr.png",
     "category": "Aceites y Untables",
     "description": "Elaborada con ingredientes seleccionados para ofrecerte ese toque casero y el equilibrio ideal de sabor que tu familia merece.",
-    "price": "$5.750"
+
   },
   {
   "id": 14,
@@ -110,7 +107,7 @@
     "image": "productos/aceitegirasolunidosx3000.png",
     "category": "Aceites Y Untables",
     "description": "Máxima durabilidad y resistencia al calor en una botella de 3 litros, diseñada para quienes cocinan en grande con la confianza de siempre.",
-    "price": "$38.650"
+  
   },
   {
   "id": 15,
@@ -118,7 +115,7 @@
     "image": "productos/toallahumedasdampy120.png",
     "category": "Aseo Personal",
     "description": "Limpia y protege la delicada piel de tu bebé con la suavidad de Dampy, ahora en un pack rendidor de 120 unidades con el ahorro que buscas.",
-    "price": "$5.000"
+  
      },
   {
   "id": 16,
@@ -134,7 +131,7 @@
     "image": "productos/lechedeslactosadax1100.png",
     "category": "Lácteos",
     "description": "Disfruta de toda la nutrición y el sabor natural de la leche sin pesadez, gracias a nuestro proceso deslactosado UHT en una rendidora presentación de 1100ml.",
-    "price": "$4.250"
+  
   },
   {
     "id": 18,
@@ -142,7 +139,7 @@
     "image": "productos/lechepolvounidosx380g.png",
     "category": "Lácteos",
     "description": "Leche en polvo de disolución instantánea, perfecta para enriquecer tus bebidas, postres y recetas favoritas con el sabor de siempre.",
-    "price": "$9.650"
+   
   }  ,
   {
     "id": 20,
@@ -150,7 +147,7 @@
     "image": "productos/lechenteragalateax900ml.png",
     "category": "Lácteos",
     "description": "La fuente de energía y calcio ideal para toda la familia, procesada con los más altos estándares de calidad en su práctica bolsa de 900ml.",
-    "price": "$3.150"
+    
   }  ,
   {
     "id": 21,
@@ -158,15 +155,15 @@
     "image": "productos/lecheenterax900ml.png",
     "category": "Lácteos",
     "description": "Leche entera de alta calidad procesada para conservar su frescura y nutrientes esenciales en una práctica presentación de 900ml.",
-    "price": "$21.450"
+  
   } ,
   {
     "id": 22,
     "name": "Leche Deslactosada UHT Galatea x900ml",
-    "image": "productos/lechedeslactosadax900ml",
+    "image": "productos/lechedeslactosadax900ml.png",
     "category": "Lácteos",
     "description": "Disfruta el sabor premium de Galatea con esta leche deslactosada de fácil digestión, ideal para sentirte ligero sin renunciar a la nutrición.",
-    "price": "$3.000"
+    
   },
   {
     "id": 23,
@@ -174,7 +171,7 @@
     "image": "productos/arrozunidosx500g.png",
     "category": "Granos y Cereales",
     "description": "Arroz de grano seleccionado y blanco perfecto, que garantiza una textura suelta y deliciosa en cada una de tus comidas.",
-    "price": "$1.750"
+   
   }  ,
   {
     "id": 24,
@@ -182,7 +179,7 @@
     "image": "productos/arrozunidosx5kl.png",
     "category": "Granos y Cereales",
     "description": "Arroz blanco seleccionado de alta pureza en formato familiar, garantizando una textura perfecta y un sabor delicioso en cada preparación.",
-    "price": "$17.750"
+   
   }  ,
   {
     "id": 25,
@@ -190,7 +187,7 @@
     "image": "productos/avenaunidosfresa.png",
     "category": "Granos y Cereales",
     "description": "La combinación perfecta de fibra y energía con un refrescante sabor a fresa, ideal para empezar tu mañana con vitalidad.",
-    "price": "$5.800"
+   
   }  ,
   {
     "id": 26,
@@ -198,7 +195,7 @@
     "image": "productos/avenaunidosvainilla.png",
     "category": "Granos y Cereales",
     "description": "Prepara fácilmente un snack saludable y lleno de sabor con nuestra avena instantánea de vainilla, diseñada para quienes buscan nutrición y practicidad.",
-    "price": "$5.800"
+ 
   }  ,
   {
     "id": 27,
@@ -206,7 +203,7 @@
     "image": "productos/hojuelasazucaradasx200gr.png",
     "category": "Granos y Cereales",
     "description": "Comienza tu mañana con el crujiente perfecto y la dulzura ideal de nuestras hojuelas de maíz azucaradas, diseñadas para darte energía en cada cucharada.",
-    "price": "$4.450"
+    
   } ,
   {
     "id": 28,
@@ -214,7 +211,7 @@
     "image": "productos/avenaunidosx250gr.png",
     "category": "Granos y Cereales",
     "description": "Inicia tus mañanas con la pureza de la avena en hojuelas Unidos, diseñada para brindarte saciedad y bienestar en una práctica presentación.\"",
-    "price": "$3.000"
+  
   },
   {
     "id": 29,
@@ -222,7 +219,7 @@
     "image": "productos/cerealgranolax300gr.png",
     "category": "Granos y Cereales",
     "description": "La mezcla perfecta de hojuelas, frutos secos y un toque crujiente en una presentación de 300g, ideal para recargar tus mañanas de energía natural.\"",
-    "price": "$6.100"
+  
   },
   {
     "id": 31,
@@ -230,7 +227,7 @@
     "image": "productos/cerealchocobolitasx200gr.png",
     "category": "Granos y Cereales",
     "description": "Explosión de sabor a chocolate en cada bocado con nuestras crujientes esferas de cereal, el desayuno más divertido para los amantes del cacao.",
-    "price": "$4.600"
+
   },
   {
     "id": 32,
@@ -238,7 +235,7 @@
     "image": "productos/cerealarosfrutax500gr.png",
     "category": "Granos y Cereales",
     "description": "Explosión de sabores frutales y colores vibrantes en cada bocado, convirtiendo el desayuno en el momento más divertido y delicioso del día.",
-    "price": "$9.800"
+  
   },
   {
     "id": 33,
@@ -246,7 +243,7 @@
     "image": "productos/cerealarrozchocox200gr.png",
     "category": "Granos y Cereales",
     "description": "Crujientes granos de arroz tostado con una deliciosa cobertura de chocolate que transforma la leche en una chocolatada irresistible.",
-    "price": "$4.500"
+   
   },
   {
     "id": 34,
@@ -254,7 +251,7 @@
     "image": "productos/cerealarrozchocox500gr.png",
     "category": "Granos y Cereales",
     "description": "Crujientes granos de arroz tostado con una deliciosa cobertura de chocolate que transforma la leche en una chocolatada irresistible.",
-    "price": "$9.800"
+  
   },
   {
     "id": 35,
@@ -262,7 +259,7 @@
     "image": "productos/cerealoncherax6.png",
     "category": "Granos y Cereales",
     "description": "La solución perfecta para el recreo: 6 paquetes individuales con la porción ideal de cereal para que los niños disfruten de un snack nutritivo y crujiente en el colegio.",
-    "price": "$6.050"
+   
   },
   {
     "id": 36,
@@ -270,7 +267,7 @@
     "image": "productos/limpiapisoscitrocanelax1000ml.png",
     "category": "Limpieza",
     "description": "Transforma tu hogar con la mezcla perfecta de notas cítricas y el toque acogedor de la canela, dejando tus pisos impecables y con un aroma duradero.",
-    "price": "$3.400"
+ 
   },
   {
     "id": 37,
@@ -278,7 +275,7 @@
     "image": "productos/detergenteropaoscurax2000.png",
     "category": "Limpieza",
     "description": "Protege la intensidad de tus prendas favoritas con nuestra fórmula especializada que evita el desgaste de los tonos oscuros y negros, lavada tras lavada.",
-    "price": "$14.800"
+   
   },
   {
     "id": 38,
@@ -286,7 +283,7 @@
     "image": "productos/limpiapisosfloralx2000ml.png",
     "category": "Limpieza",
     "description": "Aprovecha el máximo rendimiento de nuestra presentación de 2000ml, garantizando pisos impecables y un ambiente perfumado por mucho más tiempo.",
-    "price": "$5.900"
+   
   },
   {
     "id": 39,
@@ -294,7 +291,7 @@
     "image": "productos/limpiapisoslavandax1000ml.png",
     "category": "Limpieza",
     "description": "Crea un ambiente de serenidad y descanso en tu hogar con el aroma natural de la lavanda, manteniendo tus pisos impecables y relucientes.",
-    "price": "$2.950"
+ 
   },
   {
     "id": 40,
@@ -302,7 +299,7 @@
     "image": "productos/bolsapapeleraunidos.png",
     "category": "Limpieza",
     "description": "Bolsa Papelera Blanca\n43x45cm x10und",
-    "price": "$2.000"
+  
   },
   {
     "id": 41,
@@ -310,7 +307,7 @@
     "image": "productos/limpiapisoscanelax1000ml.png",
     "category": "Limpieza",
     "description": "La fórmula ideal para cuidar tus pisos y resaltar su belleza natural, eliminando bacterias y dejando un perfume especiado que encanta a todos.",
-    "price": "$3.100"
+  
   },
   {
     "id": 42,
@@ -318,7 +315,7 @@
     "image": "productos/detergentefloralpolvox500.png",
     "category": "Limpieza",
     "description": "Poderosa acción de lavado en una práctica presentación de 500g, diseñada para blanquear y proteger los colores dejando un perfume primaveral irresistible.",
-    "price": "$1.950"
+  
   },
   {
     "id": 43,
@@ -326,7 +323,7 @@
     "image": "productos/detergentefloralpolvox1000.png",
     "category": "Limpieza",
     "description": "Poderosa acción de lavado en una práctica presentación de 500g, diseñada para blanquear y proteger los colores dejando un perfume primaveral irresistible.",
-    "price": "$3.850"
+    
   },
   {
     "id": 44,
@@ -334,7 +331,7 @@
     "image": "productos/detergentefloralpolvox2800.png",
     "category": "Limpieza",
     "description": "Poderosa acción de lavado en una práctica presentación de 500g, diseñada para blanquear y proteger los colores dejando un perfume primaveral irresistible.",
-    "price": "$10.450"
+  
   },
   {
     "id": 45,
@@ -342,7 +339,7 @@
     "image": "productos/detergenteliquidofloralx4000.png",
     "category": "Limpieza",
     "description": "Ahorra más con nuestra presentación familiar de 4000ml, garantizando una remoción de manchas superior y un perfume irresistible en todas tus lavadas.",
-    "price": "$19.250"
+    
   },
   {
     "id": 46,
@@ -350,6 +347,35 @@
     "image": "productos/esponjillasunidosx6.png",
     "category": "Limpieza",
     "description": "Esponjillas\nUnidos x6und",
-    "price": "$3.400"
+   
+  },
+  {
+    "id": 47,
+    "name": "Super Combo Panadería Unidos x1000g",
+    "image": "productos/combopanx1000.png",
+    "category": "Panaderia",
+    "description": "Resuelve todas tus comidas con el Súper Combo Unidos, la combinación perfecta de panadería fresca y variada que te ofrece versatilidad desde el desayuno hasta la cena."
+  },
+  {
+    "id": 48,
+    "name": "Tostadas Unidos x10und",
+    "image": "productos/tostadasunidosx10.png",
+    "category": "Panadería",
+    "description": "El acompañamiento ideal para tus mermeladas, quesos o bebidas calientes; tostadas de alta calidad con el toque dorado perfecto que a todos en casa les encanta."
+  },
+  {
+    "id": 49,
+    "name": "Pan Redondo Unidos x15und",
+    "image": "productos/panredondo15.png",
+    "category": "Panaderia",
+    "description": "El acompañamiento ideal para tus comidas, perfecto para preparar mini sándwiches o disfrutar untado con mantequilla y mermelada en cualquier momento del día."
+  },
+  {
+    "id": 50,
+    "name": "Pan para Hamburguesa Unidos x500g",
+    "image": "productos/panhamburgx500g.png",
+    "category": "Panaderia",
+    "description": "Pan esponjoso y de gran tamaño, diseñado con la consistencia ideal para sostener todos tus ingredientes favoritos sin perder su forma ni suavidad."
   }
+  
 ]
