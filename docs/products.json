@@ -475,5 +475,41 @@
     "image": "productos/manidulcex50gr.png",
     "category": "Frutos Secos",
     "description": "Maní seleccionado de alta calidad, recubierto con una crujiente capa dulce que garantiza frescura y un sabor auténtico en un empaque práctico para llevar a todas partes."
+  },
+  {
+    "id": 65,
+    "name": "Galleta Salada Unidos x460gr",
+    "image": "productos/galletasalx460.png",
+    "category": "Dulces y Postres",
+    "description": "Disfruta de nuestro pack familiar de galletas saladas con 5 prácticos tacos individuales, ideales para mantener la frescura y compartir en cualquier momento del día."
+  },
+  {
+    "id": 66,
+    "name": "Galletas Doradas 3 tacos Unidos",
+    "image": "productos/galletasdulcesx3.png",
+    "category": "Dulces y Postres",
+    "description": "Disfruta de una galleta con la crocancia perfecta y un color dorado irresistible, diseñada para deshacerse en tu boca y brindar una experiencia única en cada mordisco."
+  },
+  {
+    "id": 67,
+    "name": "Cucas Unidos",
+    "image": "productos/cucasunidos.png",
+    "category": "Dulces y Postres",
+    "description": "Disfruta del sabor auténtico y tradicional de nuestras cucas, horneadas con panela de la mejor calidad para ofrecerte ese toque dulce y especiado que tanto nos gusta."
+  },
+  {
+    "id": 68,
+    "name": "Bocadillo Azucarado Unidos x350g",
+    "image": "productos/bocadilloazucarx350.png",
+    "category": "Dulces y Postres",
+    "description": "Disfruta del dulce sabor de la tradición con nuestro bocadillo de guayaba azucarado, una fuente natural de vitamina C ideal para endulzar tus meriendas de forma deliciosa."
+  },
+  {
+    "id": 69,
+    "name": "Bocadillo Veleño Unidos x24und",
+    "image": "productos/bocadillovelenx24.png",
+    "category": "Dulces y Postres",
+    "description": "Lleva a tu mesa el sabor más auténtico de nuestra tierra con el bocadillo veleño tradicional, elaborado con pulpa de guayaba seleccionada y envuelto en hoja de bijao para conservar su aroma y frescura natural"
   }
+  
 ]
