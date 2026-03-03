@@ -376,6 +376,34 @@
     "image": "productos/panhamburgx500g.png",
     "category": "Panaderia",
     "description": "Pan esponjoso y de gran tamaño, diseñado con la consistencia ideal para sostener todos tus ingredientes favoritos sin perder su forma ni suavidad."
+  },
+  {
+    "id": 51,
+    "name": "Sardina Unidos x155g",
+    "image": "productos/sardinax155g.png",
+    "category": "Enlatados",
+    "description": "Disfruta de la mejor selección de pescado sumergido en una rica y suave salsa de tomate, ideal para darle un toque tradicional y delicioso a tus comidas."
+  },
+  {
+    "id": 52,
+    "name": "Atún en Agua Unidos x170gr",
+    "image": "productos/atunaguax170gr.png",
+    "category": "Enlatados",
+    "description": "Disfruta de lomitos de atún premium conservados en agua para mantener su sabor natural y ligereza, convirtiéndose en la fuente de proteína ideal para tus ensaladas y cenas ligeras."
+  },
+  {
+    "id": 53,
+    "name": "Atún en Aceite de Girasol Tripack x240gr",
+    "image": "productos/atunaceitex240.png",
+    "category": "Enlatados",
+    "description": "Aporta energía y proteína a tu día con esta presentación de 240g, ideal para compartir en recetas familiares como pastas, arroces o rellenos gourmet"
+  },
+  {
+    "id": 54,
+    "name": "Lomitos de Atún En aceite de girasol x160g",
+    "image": "productos/atunaceitex160g.png",
+    "category": "Enlatados",
+    "description": "Disfruta de la suavidad y el sabor superior de nuestros lomitos de atún sumergidos en aceite de girasol, perfectos para quienes buscan una textura más jugosa en sus platos"
   }
   
 ]
