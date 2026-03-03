@@ -110,8 +110,6 @@
         </select>
         <label>Descripción</label>
         <textarea id="productDescription" name="description" required></textarea>
-        <label>Precio ($X.XXX)</label>
-        <input type="text" id="productPrice" name="price" required>
         <div class="button-group">
             <button type="button" class="btn-secondary" onclick="resetForm()">Limpiar</button>
             <button type="submit" class="btn-primary">Generar JSON</button>
@@ -157,11 +155,6 @@
         document.getElementById('previewSection').style.display = 'none';
         document.getElementById('productId').value = lastProductId + 1;
     }
-    document.getElementById('productPrice').addEventListener('input', function(e) {
-        let value = e.target.value.replace(/[^\d]/g, '');
-        if (value) {
-            e.target.value = '$' + parseInt(value).toLocaleString('es-CO');
-        }
     });
 </script>
 </body>
