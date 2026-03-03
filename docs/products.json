@@ -4,14 +4,14 @@
     "name": "Leche Unidos Azucarada",
     "image": "productos/leche_unidos_azucarada.png",
     "category": "Lácteos",
-    "description": "Leche fresca azucarada de la marca Unidos, ideal para el desayuno.",
+    "description": "Leche fresca azucarada de la marca Unidos, ideal para el desayuno."
   },
   {
     "id": 2,
     "name": "Aceite Unidos X 1000ml",
     "image": "productos/aceiteunidosx1000ml.png",
     "category": "Aceites y Untables",
-    "description": "Aceite vegetal de alta calidad, perfecto para cocinar.",
+    "description": "Aceite vegetal de alta calidad, perfecto para cocinar."
    
   },
   {
@@ -19,21 +19,21 @@
     "name": "Margarina Unidos Con Sal X 1000gr",
     "image": "productos/margarinaunidos_consal_x1000gr.png",
     "category": "Aceites y Untables",
-    "description": "Margarina con sal, excelente para untar en panes y repostería.",
+    "description": "Margarina con sal, excelente para untar en panes y repostería."
   },
   {
     "id": 4,
     "name": "Agua Pura Unidos Botella x1000ml",
     "image": "productos/agua.png",
     "category": "Bebidas",
-    "description": "Un litro de pureza cristalina diseñado para mantener tu energía y bienestar en cada gota.",
+    "description": "Un litro de pureza cristalina diseñado para mantener tu energía y bienestar en cada gota."
   },
   {
     "id": 5,
     "name": "Almendra Natural Unidos x100gr",
     "image": "productos/almendrax100.png",
     "category": "Frutos secos",
-    "description": "Toda la frescura y el poder antioxidante de la almendra natural en un empaque de 100g listo para llevar a donde quieras.",
+    "description": "Toda la frescura y el poder antioxidante de la almendra natural en un empaque de 100g listo para llevar a donde quieras."
   
   },
   {
@@ -41,7 +41,7 @@
     "name": "Arequipe Natural Unidos Tarrina x200gr",
     "image": "productos/arequipex200.png",
     "category": "Dulces y Postres",
-    "description": "Date un gusto irresistible con nuestro arequipe natural de 200g, elaborado tradicionalmente para fundirse en tu paladar.",
+    "description": "Date un gusto irresistible con nuestro arequipe natural de 200g, elaborado tradicionalmente para fundirse en tu paladar."
 
   },
    {
@@ -49,7 +49,7 @@
     "name": "Salsa de Tomte Unidos x400gr",
     "image": "productos/salsadetomateunidosx400.png",
     "category": "Aceites y Untables",
-    "description": "Lleva a tu mesa el sabor clásico y casero con nuestra salsa de tomate natural de 400g, elaborada para dar ese toque especial que a todos les encanta.",
+    "description": "Lleva a tu mesa el sabor clásico y casero con nuestra salsa de tomate natural de 400g, elaborada para dar ese toque especial que a todos les encanta."
 
      
   },
@@ -58,7 +58,7 @@
     "name": "Salsa de Tomate Unidos x200gr",
     "image": "productos/salsatomateunidosx200grcx24.png",
     "category": "Aceites y Untables",
-    "description": "Dale a tus platos ese toque casero e irresistible con nuestra salsa de tomate natural, la aliada ideal para tus recetas favoritas.",
+    "description": "Dale a tus platos ese toque casero e irresistible con nuestra salsa de tomate natural, la aliada ideal para tus recetas favoritas."
 
   },
   {
@@ -66,15 +66,15 @@
     "name": "Margarina Unidos Edicion Especial x1000gr ",
     "image": "productos/margarina_edicionespecialx1000gr.png",
     "category": "Aceites y Untables",
-    "description": "Descubre el sabor superior de nuestra Edición Especial: una margarina de 100g con cremosidad única y el toque de sal ideal para tus momentos gourmet.",
+    "description": "Descubre el sabor superior de nuestra Edición Especial: una margarina de 100g con cremosidad única y el toque de sal ideal para tus momentos gourmet."
  
   },
   {
   "id": 10,
-    "name": "Margarina en Barra Unidos x125gr ",
+    "name": "Margarina en Barra Unidos x125gr "
     "image": "productos/margarina_enbarraunidosx125grcx80.png",
     "category": "Aceites y Untables",
-    "description": "La barra de 125g ideal para untar o cocinar, ofreciendo la consistencia perfecta y ese sabor tradicional que transforma tus desayunos.",
+    "description": "La barra de 125g ideal para untar o cocinar, ofreciendo la consistencia perfecta y ese sabor tradicional que transforma tus desayunos."
     
   },
   {
@@ -82,7 +82,7 @@
     "name": "Margarina Unidos x250gr",
     "image": "productos/margarinaunidosx250.png",
     "category": "Aceites y Untables",
-    "description": "La medida perfecta de 250g para el uso diario en el hogar, brindando cremosidad y un sabor inigualable a todas tus comidas.",
+    "description": "La medida perfecta de 250g para el uso diario en el hogar, brindando cremosidad y un sabor inigualable a todas tus comidas."
    
   },
   {
@@ -90,7 +90,7 @@
     "name": "Mayonesa Unidos x200gr",
     "image": "productos/mayonesaunidosx200gr.png",
     "category": "Aceites y Untables",
-    "description": "Disfruta de la textura más suave y cremosa en esta práctica presentación de 200g, el toque final perfecto para tus recetas favoritas",
+    "description": "Disfruta de la textura más suave y cremosa en esta práctica presentación de 200g, el toque final perfecto para tus recetas favoritas"
  
   },
   {
@@ -98,7 +98,7 @@
     "name": "Mayonesa Unidos x380gr",
     "image": "productos/mayonesaunidosx380gr.png",
     "category": "Aceites y Untables",
-    "description": "Elaborada con ingredientes seleccionados para ofrecerte ese toque casero y el equilibrio ideal de sabor que tu familia merece.",
+    "description": "Elaborada con ingredientes seleccionados para ofrecerte ese toque casero y el equilibrio ideal de sabor que tu familia merece."
 
   },
   {
@@ -106,7 +106,7 @@
     "name": "Aceite Giralsol Unidos x3000ml",
     "image": "productos/aceitegirasolunidosx3000.png",
     "category": "Aceites Y Untables",
-    "description": "Máxima durabilidad y resistencia al calor en una botella de 3 litros, diseñada para quienes cocinan en grande con la confianza de siempre.",
+    "description": "Máxima durabilidad y resistencia al calor en una botella de 3 litros, diseñada para quienes cocinan en grande con la confianza de siempre."
   
   },
   {
@@ -114,7 +114,7 @@
     "name": "Toallas Humedas Dampy Pague 80 Lleve 120",
     "image": "productos/toallahumedasdampy120.png",
     "category": "Aseo Personal",
-    "description": "Limpia y protege la delicada piel de tu bebé con la suavidad de Dampy, ahora en un pack rendidor de 120 unidades con el ahorro que buscas.",
+    "description": "Limpia y protege la delicada piel de tu bebé con la suavidad de Dampy, ahora en un pack rendidor de 120 unidades con el ahorro que buscas."
   
      },
   {
@@ -122,7 +122,7 @@
     "name": "Leche UHT Entera Unidos x1100ml",
     "image": "productos/lecheenterax1100ml.png",
     "category": "Lácteos",
-    "description": "Toda la pureza y el valor nutricional de la leche del campo en una presentación de 1100ml con proceso UHT para mayor duración y frescura.",
+    "description": "Toda la pureza y el valor nutricional de la leche del campo en una presentación de 1100ml con proceso UHT para mayor duración y frescura."
     "price": "$4.150"
   },
   {
@@ -130,7 +130,7 @@
     "name": "Leche UTH Unidos Deslactosada x1100ml",
     "image": "productos/lechedeslactosadax1100.png",
     "category": "Lácteos",
-    "description": "Disfruta de toda la nutrición y el sabor natural de la leche sin pesadez, gracias a nuestro proceso deslactosado UHT en una rendidora presentación de 1100ml.",
+    "description": "Disfruta de toda la nutrición y el sabor natural de la leche sin pesadez, gracias a nuestro proceso deslactosado UHT en una rendidora presentación de 1100ml."
   
   },
   {
@@ -138,7 +138,7 @@
     "name": "Leche en Polvo Entera x380g",
     "image": "productos/lechepolvounidosx380g.png",
     "category": "Lácteos",
-    "description": "Leche en polvo de disolución instantánea, perfecta para enriquecer tus bebidas, postres y recetas favoritas con el sabor de siempre.",
+    "description": "Leche en polvo de disolución instantánea, perfecta para enriquecer tus bebidas, postres y recetas favoritas con el sabor de siempre."
    
   }  ,
   {
@@ -146,7 +146,7 @@
     "name": "Leche Entera Galatea x900ml",
     "image": "productos/lechenteragalateax900ml.png",
     "category": "Lácteos",
-    "description": "La fuente de energía y calcio ideal para toda la familia, procesada con los más altos estándares de calidad en su práctica bolsa de 900ml.",
+    "description": "La fuente de energía y calcio ideal para toda la familia, procesada con los más altos estándares de calidad en su práctica bolsa de 900ml."
     
   }  ,
   {
@@ -154,7 +154,7 @@
     "name": "Leche Entera Unidos x900ml",
     "image": "productos/lecheenterax900ml.png",
     "category": "Lácteos",
-    "description": "Leche entera de alta calidad procesada para conservar su frescura y nutrientes esenciales en una práctica presentación de 900ml.",
+    "description": "Leche entera de alta calidad procesada para conservar su frescura y nutrientes esenciales en una práctica presentación de 900ml."
   
   } ,
   {
@@ -162,7 +162,7 @@
     "name": "Leche Deslactosada UHT Galatea x900ml",
     "image": "productos/lechedeslactosadax900ml.png",
     "category": "Lácteos",
-    "description": "Disfruta el sabor premium de Galatea con esta leche deslactosada de fácil digestión, ideal para sentirte ligero sin renunciar a la nutrición.",
+    "description": "Disfruta el sabor premium de Galatea con esta leche deslactosada de fácil digestión, ideal para sentirte ligero sin renunciar a la nutrición."
     
   },
   {
@@ -170,7 +170,7 @@
     "name": "Arroz Unidos x500g",
     "image": "productos/arrozunidosx500g.png",
     "category": "Granos y Cereales",
-    "description": "Arroz de grano seleccionado y blanco perfecto, que garantiza una textura suelta y deliciosa en cada una de tus comidas.",
+    "description": "Arroz de grano seleccionado y blanco perfecto, que garantiza una textura suelta y deliciosa en cada una de tus comidas."
    
   }  ,
   {
@@ -178,7 +178,7 @@
     "name": "Arroz Blanco Unidos x5kl",
     "image": "productos/arrozunidosx5kl.png",
     "category": "Granos y Cereales",
-    "description": "Arroz blanco seleccionado de alta pureza en formato familiar, garantizando una textura perfecta y un sabor delicioso en cada preparación.",
+    "description": "Arroz blanco seleccionado de alta pureza en formato familiar, garantizando una textura perfecta y un sabor delicioso en cada preparación."
    
   }  ,
   {
@@ -186,7 +186,7 @@
     "name": "Avena Instantanea Unidos Sabor Fresa",
     "image": "productos/avenaunidosfresa.png",
     "category": "Granos y Cereales",
-    "description": "La combinación perfecta de fibra y energía con un refrescante sabor a fresa, ideal para empezar tu mañana con vitalidad.",
+    "description": "La combinación perfecta de fibra y energía con un refrescante sabor a fresa, ideal para empezar tu mañana con vitalidad."
    
   }  ,
   {
@@ -194,7 +194,7 @@
     "name": "Avena Unidos Sabor Vainilla",
     "image": "productos/avenaunidosvainilla.png",
     "category": "Granos y Cereales",
-    "description": "Prepara fácilmente un snack saludable y lleno de sabor con nuestra avena instantánea de vainilla, diseñada para quienes buscan nutrición y practicidad.",
+    "description": "Prepara fácilmente un snack saludable y lleno de sabor con nuestra avena instantánea de vainilla, diseñada para quienes buscan nutrición y practicidad."
  
   }  ,
   {
@@ -210,7 +210,7 @@
     "name": "Avena Hojuelas Unidos x250gr",
     "image": "productos/avenaunidosx250gr.png",
     "category": "Granos y Cereales",
-    "description": "Inicia tus mañanas con la pureza de la avena en hojuelas Unidos, diseñada para brindarte saciedad y bienestar en una práctica presentación.\"",
+    "description": "Inicia tus mañanas con la pureza de la avena en hojuelas Unidos, diseñada para brindarte saciedad y bienestar en una práctica presentación."
   
   },
   {
@@ -218,7 +218,7 @@
     "name": "Cereal Granola x300g",
     "image": "productos/cerealgranolax300gr.png",
     "category": "Granos y Cereales",
-    "description": "La mezcla perfecta de hojuelas, frutos secos y un toque crujiente en una presentación de 300g, ideal para recargar tus mañanas de energía natural.\"",
+    "description": "La mezcla perfecta de hojuelas, frutos secos y un toque crujiente en una presentación de 300g, ideal para recargar tus mañanas de energía natural."
   
   },
   {
@@ -226,7 +226,7 @@
     "name": "Cereal Chocobolitas x200g",
     "image": "productos/cerealchocobolitasx200gr.png",
     "category": "Granos y Cereales",
-    "description": "Explosión de sabor a chocolate en cada bocado con nuestras crujientes esferas de cereal, el desayuno más divertido para los amantes del cacao.",
+    "description": "Explosión de sabor a chocolate en cada bocado con nuestras crujientes esferas de cereal, el desayuno más divertido para los amantes del cacao."
 
   },
   {
@@ -234,7 +234,7 @@
     "name": "Cereal Aros Frutales x500gr",
     "image": "productos/cerealarosfrutax500gr.png",
     "category": "Granos y Cereales",
-    "description": "Explosión de sabores frutales y colores vibrantes en cada bocado, convirtiendo el desayuno en el momento más divertido y delicioso del día.",
+    "description": "Explosión de sabores frutales y colores vibrantes en cada bocado, convirtiendo el desayuno en el momento más divertido y delicioso del día."
   
   },
   {
@@ -242,7 +242,7 @@
     "name": "Cereal Arroz Achocolatado x200gr",
     "image": "productos/cerealarrozchocox200gr.png",
     "category": "Granos y Cereales",
-    "description": "Crujientes granos de arroz tostado con una deliciosa cobertura de chocolate que transforma la leche en una chocolatada irresistible.",
+    "description": "Crujientes granos de arroz tostado con una deliciosa cobertura de chocolate que transforma la leche en una chocolatada irresistible."
    
   },
   {
@@ -250,7 +250,7 @@
     "name": "Cereal Arroz Achocolatado x500gr",
     "image": "productos/cerealarrozchocox500gr.png",
     "category": "Granos y Cereales",
-    "description": "Crujientes granos de arroz tostado con una deliciosa cobertura de chocolate que transforma la leche en una chocolatada irresistible.",
+    "description": "Crujientes granos de arroz tostado con una deliciosa cobertura de chocolate que transforma la leche en una chocolatada irresistible."
   
   },
   {
@@ -258,7 +258,7 @@
     "name": "Cereal Lonchera Unidos x6",
     "image": "productos/cerealoncherax6.png",
     "category": "Granos y Cereales",
-    "description": "La solución perfecta para el recreo: 6 paquetes individuales con la porción ideal de cereal para que los niños disfruten de un snack nutritivo y crujiente en el colegio.",
+    "description": "La solución perfecta para el recreo: 6 paquetes individuales con la porción ideal de cereal para que los niños disfruten de un snack nutritivo y crujiente en el colegio."
    
   },
   {
@@ -266,7 +266,7 @@
     "name": "Limpiapisos Citrocanela Unidos x1000ml",
     "image": "productos/limpiapisoscitrocanelax1000ml.png",
     "category": "Limpieza",
-    "description": "Transforma tu hogar con la mezcla perfecta de notas cítricas y el toque acogedor de la canela, dejando tus pisos impecables y con un aroma duradero.",
+    "description": "Transforma tu hogar con la mezcla perfecta de notas cítricas y el toque acogedor de la canela, dejando tus pisos impecables y con un aroma duradero."
  
   },
   {
@@ -274,7 +274,7 @@
     "name": "Detergente Unidos para Ropa Oscura",
     "image": "productos/detergenteropaoscurax2000.png",
     "category": "Limpieza",
-    "description": "Protege la intensidad de tus prendas favoritas con nuestra fórmula especializada que evita el desgaste de los tonos oscuros y negros, lavada tras lavada.",
+    "description": "Protege la intensidad de tus prendas favoritas con nuestra fórmula especializada que evita el desgaste de los tonos oscuros y negros, lavada tras lavada."
    
   },
   {
@@ -282,7 +282,7 @@
     "name": "Limpiapisos Unidos Floral x2000ml",
     "image": "productos/limpiapisosfloralx2000ml.png",
     "category": "Limpieza",
-    "description": "Aprovecha el máximo rendimiento de nuestra presentación de 2000ml, garantizando pisos impecables y un ambiente perfumado por mucho más tiempo.",
+    "description": "Aprovecha el máximo rendimiento de nuestra presentación de 2000ml, garantizando pisos impecables y un ambiente perfumado por mucho más tiempo."
    
   },
   {
@@ -290,7 +290,7 @@
     "name": "Limpiapisos Unidos Lavanda x1000ml",
     "image": "productos/limpiapisoslavandax1000ml.png",
     "category": "Limpieza",
-    "description": "Crea un ambiente de serenidad y descanso en tu hogar con el aroma natural de la lavanda, manteniendo tus pisos impecables y relucientes.",
+    "description": "Crea un ambiente de serenidad y descanso en tu hogar con el aroma natural de la lavanda, manteniendo tus pisos impecables y relucientes."
  
   },
   {
@@ -306,7 +306,7 @@
     "name": "Limpiapisos Unidos Canela x1000ml",
     "image": "productos/limpiapisoscanelax1000ml.png",
     "category": "Limpieza",
-    "description": "La fórmula ideal para cuidar tus pisos y resaltar su belleza natural, eliminando bacterias y dejando un perfume especiado que encanta a todos.",
+    "description": "La fórmula ideal para cuidar tus pisos y resaltar su belleza natural, eliminando bacterias y dejando un perfume especiado que encanta a todos."
   
   },
   {
@@ -314,7 +314,7 @@
     "name": "Detergente Unidos Floral x500gr",
     "image": "productos/detergentefloralpolvox500.png",
     "category": "Limpieza",
-    "description": "Poderosa acción de lavado en una práctica presentación de 500g, diseñada para blanquear y proteger los colores dejando un perfume primaveral irresistible.",
+    "description": "Poderosa acción de lavado en una práctica presentación de 500g, diseñada para blanquear y proteger los colores dejando un perfume primaveral irresistible."
   
   },
   {
@@ -322,7 +322,7 @@
     "name": "Detergente Unidos Floral x1000gr",
     "image": "productos/detergentefloralpolvox1000.png",
     "category": "Limpieza",
-    "description": "Poderosa acción de lavado en una práctica presentación de 500g, diseñada para blanquear y proteger los colores dejando un perfume primaveral irresistible.",
+    "description": "Poderosa acción de lavado en una práctica presentación de 500g, diseñada para blanquear y proteger los colores dejando un perfume primaveral irresistible."
     
   },
   {
@@ -330,7 +330,7 @@
     "name": "Detergente Unidos Floral x2800gr",
     "image": "productos/detergentefloralpolvox2800.png",
     "category": "Limpieza",
-    "description": "Poderosa acción de lavado en una práctica presentación de 500g, diseñada para blanquear y proteger los colores dejando un perfume primaveral irresistible.",
+    "description": "Poderosa acción de lavado en una práctica presentación de 500g, diseñada para blanquear y proteger los colores dejando un perfume primaveral irresistible."
   
   },
   {
@@ -338,7 +338,7 @@
     "name": "Detergente Líquido Floral Unidos x4000ml",
     "image": "productos/detergenteliquidofloralx4000.png",
     "category": "Limpieza",
-    "description": "Ahorra más con nuestra presentación familiar de 4000ml, garantizando una remoción de manchas superior y un perfume irresistible en todas tus lavadas.",
+    "description": "Ahorra más con nuestra presentación familiar de 4000ml, garantizando una remoción de manchas superior y un perfume irresistible en todas tus lavadas."
     
   },
   {
@@ -346,7 +346,7 @@
     "name": "Esponjillas Para Brillar Unidos",
     "image": "productos/esponjillasunidosx6.png",
     "category": "Limpieza",
-    "description": "Esponjillas\nUnidos x6und",
+    "description": "Esponjillas nUnidos x6und"
    
   },
   {
