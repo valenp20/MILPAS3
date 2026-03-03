@@ -1,42 +1,169 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agregar Producto</title>
+    <title>Agregar Producto - MILPAS3</title>
+    <style>
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 24px auto;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 12px 32px rgba(102,126,234,.16);
+            padding: 28px 24px 28px 24px;
+        }
+        h1 {
+            background: linear-gradient(90deg,#667eea,#764ba2);
+            color: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 32px;
+            font-size:1.6rem;
+        }
+        label {
+            font-weight: 600;
+            margin-bottom: 2px;
+            display: block;
+        }
+        input,textarea,select {
+            width: 100%;
+            margin-bottom: 18px;
+            padding: 10px 14px;
+            border: 2px solid #e0e0e0;
+            border-radius: 7px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        textarea { min-height: 70px; }
+        .button-group {
+            display: flex;
+            gap: 10px;
+        }
+        button {
+            flex: 1;
+            padding: 10px 0;
+            border: none;
+            border-radius: 7px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            font-weight: bold;
+            transition: .18s;
+        }
+        .btn-primary { background: #667eea; color: #fff; }
+        .btn-secondary { background: #eff2f7; color: #333; }
+        .btn-primary:hover { background: #435bbb;}
+        .success-message { color: #299a49; margin: 10px 0 0 0; font-weight: 600;}
+        .preview-section {
+            background: #f8f9fa;
+            border-radius: 7px;
+            padding: 16px;
+            margin-top: 22px;
+        }
+        pre {
+            background: #23272f;
+            color: #e0e5ef;
+            padding: 14px;
+            border-radius: 5px;
+            font-family: 'Fira Mono',monospace;
+            overflow-x: auto;
+        }
+        .btn-copy {
+            background: #764ba2; color: #fff; border: 0;
+            border-radius: 6px; padding: 8px 14px; margin-left: 8px;
+        }
+    </style>
 </head>
 <body>
+<div class="container">
     <h1>Agregar Producto</h1>
-    <form id="agregarProductoForm">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
-        <br>
-        <label for="descripcion">Descripción:</label>
-        <input type="text" id="descripcion" name="descripcion" required>
-        <br>
-        <label for="categoria">Categoría:</label>
-        <input type="text" id="categoria" name="categoria" required>
-        <br>
-        <label for="cantidad">Cantidad:</label>
-        <input type="number" id="cantidad" name="cantidad" required>
-        <br>
-        <button type="submit">Agregar</button>
+    <form id="productForm">
+        <label>ID del Producto</label>
+        <input type="number" id="productId" name="id" required>
+        <label>Nombre del Producto</label>
+        <input type="text" id="productName" name="name" required>
+        <label>Ruta de Imagen (relativa al folder docs/)</label>
+        <input type="text" id="productImage" name="image" placeholder="productos/nombre.png" required>
+        <label>Categoría</label>
+        <select id="productCategory" name="category" required>
+            <option value="">Selecciona</option>
+            <option value="Lácteos">Lácteos</option>
+            <option value="Aceites y Untables">Aceites y Untables</option>
+            <option value="Bebidas">Bebidas</option>
+            <option value="Frutos Secos">Frutos Secos</option>
+            <option value="Aseo Personal">Aseo Personal</option>
+            <option value="Panadería">Panadería</option>
+            <option value="Limpieza">Limpieza</option>
+            <option value="Hogar">Hogar</option>
+            <option value="Dulces y Postres">Dulces y Postres</option>
+            <option value="Condimentos">Condimentos</option>
+            <option value="Enlatados">Enlatados</option>
+            <option value="Granos y Cereales">Granos y Cereales</option>
+        </select>
+        <label>Descripción</label>
+        <textarea id="productDescription" name="description" required></textarea>
+        <label>Precio ($X.XXX)</label>
+        <input type="text" id="productPrice" name="price" required>
+        <div class="button-group">
+            <button type="button" class="btn-secondary" onclick="resetForm()">Limpiar</button>
+            <button type="submit" class="btn-primary">Generar JSON</button>
+        </div>
     </form>
+    <div class="success-message" id="successMessage" style="display:none;">¡JSON generado! Copia el código abajo:</div>
+    <div class="preview-section" id="previewSection" style="display:none;">
+        <b>JSON generado:</b>
+        <button class="btn-copy" onclick="copyToClipboard()">Copiar</button>
+        <pre id="jsonPreview"></pre>
+    </div>
+</div>
+<script>
+    // Inicializar ID basado en el último producto (puedes ajustar el número)
+    let lastProductId = 27;
+    document.getElementById('productId').value = lastProductId + 1;
 
-    <script>
-    document.getElementById('agregarProductoForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        const producto = {
-            nombre: document.getElementById('nombre').value,
-            descripcion: document.getElementById('descripcion').value,
-            categoria: document.getElementById('categoria').value,
-            cantidad: document.getElementById('cantidad').value,
+    document.getElementById('productForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = {
+            id: parseInt(document.getElementById('productId').value),
+            name: document.getElementById('productName').value.trim(),
+            image: document.getElementById('productImage').value.trim(),
+            category: document.getElementById('productCategory').value,
+            description: document.getElementById('productDescription').value.trim(),
+            price: document.getElementById('productPrice').value.trim()
         };
-
-        // Lógica para enviar el objeto producto al servidor
-        console.log(producto);
+        const jsonOutput = ',\n  ' + JSON.stringify(formData, null, 2).replace(/\n/g, '\n  ');
+        document.getElementById('jsonPreview').textContent = jsonOutput;
+        document.getElementById('successMessage').style.display = '';
+        document.getElementById('previewSection').style.display = '';
+        lastProductId++;
+        document.getElementById('productId').value = lastProductId + 1;
     });
-    </script>
+    function copyToClipboard() {
+        const jsonText = document.getElementById('jsonPreview').textContent;
+        navigator.clipboard.writeText(jsonText);
+        alert('¡Copiado al portapapeles!');
+    }
+    function resetForm() {
+        document.getElementById('productForm').reset();
+        document.getElementById('successMessage').style.display = 'none';
+        document.getElementById('previewSection').style.display = 'none';
+        document.getElementById('productId').value = lastProductId + 1;
+    }
+    document.getElementById('productPrice').addEventListener('input', function(e) {
+        let value = e.target.value.replace(/[^\d]/g, '');
+        if (value) {
+            e.target.value = '$' + parseInt(value).toLocaleString('es-CO');
+        }
+    });
+</script>
 </body>
 </html>
