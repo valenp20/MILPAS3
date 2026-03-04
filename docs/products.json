@@ -637,6 +637,56 @@
     "image": "productos/canelalargax30.png",
     "category": "Condimentos",
     "description": "Seleccionamos las mejores astillas de canela en su presentación extralarga para conservar toda su frescura, brindando un aroma intenso y un sabor profundo a tus infusiones y recetas tradicionales."
+  },
+  {
+    "id": 90,
+    "name": "Maní Salado Unidos x50gr",
+    "image": "productos/manisaladox50.png",
+    "category": "Condimentos",
+    "description": "Disfruta de un impulso de energía natural con nuestro maní salado, cuidadosamente tostado para obtener el punto exacto de crocancia y sabor que te acompaña en cualquier momento del día."
+  },
+  {
+    "id": 91,
+    "name": " Paprika Molida Unidos x20gr",
+    "image": "productos/paprikamolidax20.png",
+    "category": "Condimentos",
+    "description": "Experimenta un sabor suave y ligeramente ahumado que transforma tus recetas; nuestra paprika de alta calidad es el secreto para darle profundidad aromática a cada preparación."
+  },
+  {
+    "id": 92,
+    "name": "Pimienta Molida Unidos x60gr",
+    "image": "productos/pimientaunidosx60g.png",
+    "category": "Condimentos",
+    "description": "Disfruta de la potencia y el carácter de granos seleccionados y finamente molidos para garantizar una distribución uniforme del sabor en todas tus preparaciones culinarias."
+  },
+  {
+    "id": 93,
+    "name": "Laurel en Hojas Unidos x8gr",
+    "image": "productos/laurelunidosx80gr.png",
+    "category": "Condimentos",
+    "description": "Romatiza tus platos con la fragancia clásica y el sabor herbal de nuestras hojas de laurel seleccionadas, el ingrediente esencial para dar profundidad a sopas, guisos y salsas."
+  },
+  {
+    "id": 94,
+    "name": "Tomillo Molido Unidos x15gr",
+    "image": "productos/tomillounidosx15gr.png",
+    "category": "Condimentos",
+    "description": "Disfruta de la comodidad del tomillo finamente molido que conserva toda su esencia natural, garantizando una dosificación uniforme y un sabor intenso en cada una de tus preparaciones."
+  },
+  {
+    "id": 95,
+    "name": "Adobo para Parrilla Unidos x60gr",
+    "image": "productos/adobounidosx60gr.png",
+    "category": "Condimentos",
+    "description": "Lleva tus asados al siguiente nivel con nuestro adobo especial para parrilla, una mezcla equilibrada de especias diseñada para resaltar el sabor natural de las carnes y crear una costra deliciosa y aromática."
+  },
+  {
+    "id": 96,
+    "name": "Sal Unidos",
+    "image": "productos/salunidosx60gr.png",
+    "category": "Condimentos",
+    "description": "Llevala en cualquiera de nuestras dos presentaciones de 500g y 1000g"
   }
+  
   
 ]
