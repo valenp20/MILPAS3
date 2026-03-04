@@ -510,6 +510,55 @@
     "image": "productos/bocadillovelenx24.png",
     "category": "Dulces y Postres",
     "description": "Lleva a tu mesa el sabor más auténtico de nuestra tierra con el bocadillo veleño tradicional, elaborado con pulpa de guayaba seleccionada y envuelto en hoja de bijao para conservar su aroma y frescura natural"
+  },
+  {
+    "id": 70,
+    "name": "Bocadillo Veleño Unidos x650gr",
+    "image": "productos/bocadillovelenx36.png",
+    "category": "Dulces y Postres",
+    "description": "La presentación ideal para familias y eventos; un generoso paquete de 36 unidades individuales que garantiza un postre típico, nutritivo y lleno de energía para todos"
+  },
+  {
+    "id": 71,
+    "name": "Galletas de Navidad Caseritas x130g",
+    "image": "productos/galletasnavidadx130.png",
+    "category": "Dulces y Postres",
+    "description": "Celebra las fiestas con el sabor inconfundible de nuestras galletas navideñas, horneadas con ese toque casero que evoca los mejores recuerdos y tradiciones en familia"
+  },
+  {
+    "id": 72,
+    "name": "Bocadillo Unidos x24und",
+    "image": "productos/bocadillounidosx24.png",
+    "category": "Dulces y Postres",
+    "description": "Disfruta de la receta original con nuestro bocadillo de guayaba envuelto individualmente, conservando toda la frescura y el sabor auténtico que lo hace el postre favorito de los hogares"
+  },
+  {
+    "id": 73,
+    "name": "Natilla Tradicional Unidos x200g",
+    "image": "productos/natillatradicx200g.png",
+    "category": "Dulces y Postres",
+    "description": "Revive los mejores momentos en familia con el sabor auténtico de nuestra natilla tradicional, el postre infaltable que trae la esencia de la Navidad a tu mesa en cualquier época del año"
+  },
+  {
+    "id": 74,
+    "name": "Natilla de Maracuyá Unidos x200g",
+    "image": "productos/natillamaracuyax200g.png",
+    "category": "Dulces y Postres",
+    "description": "Experimenta una explosión de sabor tropical en cada bocado; una alternativa refrescante y deliciosa diseñada para quienes buscan sorprender con un postre diferente y lleno de aroma"
+  },
+  {
+    "id": 75,
+    "name": "Bocadillo Veleño",
+    "image": "productos/bocadillovelenx16.png",
+    "category": "Dulces y Postres",
+    "description": "Unidos x16und"
+  },
+  {
+    "id": 76,
+    "name": "Bocadillo Veleño",
+    "image": "productos/bocadillovelenx12.png",
+    "category": "Dulces y Postres",
+    "description": "Unidos x12und"
   }
   
 ]
