@@ -559,6 +559,84 @@
     "image": "productos/bocadillovelenx12.png",
     "category": "Dulces y Postres",
     "description": "Unidos x12und"
+  },
+  {
+    "id": 77,
+    "name": "Jabón Líquido para Manos Frutos rojos x2000ml",
+    "image": "productos/jabonmanosx2000.png",
+    "category": "Aseo Personal",
+    "description": "Disfruta de una limpieza profunda con el delicioso y vibrante aroma a frutos rojos, dejando tus manos suaves, frescas y delicadamente perfumadas en cada lavado."
+  },
+  {
+    "id": 78,
+    "name": "Jabón Líquido Frutos rojos x2000ml",
+    "image": "productos/jabonunidosx2000.png",
+    "category": "Aseo Personal",
+    "description": "La presentación ideal de 2000ml diseñada para el cuidado de toda la familia, ofreciendo la mejor relación entre calidad y ahorro para el bienestar de tu hogar."
+  },
+  {
+    "id": 79,
+    "name": "Jabón Líquido Frutos rojos x1000ml",
+    "image": "productos/jabonunidosx1000.png",
+    "category": "Aseo Personal",
+    "description": "La medida perfecta de 1000ml para el uso diario en casa, combinando una limpieza superior con el rendimiento que tu familia necesita para el cuidado personal."
+  },
+  {
+    "id": 81,
+    "name": "Copitos de Algodón Unidos",
+    "image": "productos/copitosalgodonunidos.png",
+    "category": "Aseo Personal",
+    "description": "Disfruta de la máxima suavidad con nuestros copitos elaborados en algodón de alta pureza, diseñados para ofrecer un cuidado delicado y seguro en tu rutina de higiene diaria."
+  },
+  {
+    "id": 83,
+    "name": "Jabón de Barra (Líquido Azul x960ml)",
+    "image": "productos/jabondebarra.png",
+    "category": "Aseo Personal",
+    "description": "Potencia el lavado de tus prendas con la eficacia del jabón azul tradicional en una práctica fórmula líquida, diseñada para remover manchas difíciles mientras cuida las fibras de tu ropa."
+  },
+  {
+    "id": 84,
+    "name": "Jabón Líquido de Avena Unidos x1000ml",
+    "image": "productos/jabondeavenax1000.png",
+    "category": "Aseo Personal",
+    "description": "Brinda a tus manos el cuidado que merecen con las propiedades nutritivas de la avena, dejando la piel suave, hidratada y con una sensación de frescura natural después de cada uso."
+  },
+  {
+    "id": 85,
+    "name": "Comino Entero Unidos x15gr",
+    "image": "productos/cominoenterox15.png",
+    "category": "Condimentos",
+    "description": "Dale un toque vibrante y tradicional a tus preparaciones con nuestro comino entero de alta calidad, ideal para resaltar los sabores en guisos, carnes y legumbres con un aroma inconfundible."
+  },
+  {
+    "id": 86,
+    "name": "Color Unidos",
+    "image": "productos/colorunidos.png",
+    "category": "Condimentos",
+    "description": "Dale vida y un tono vibrante a tus platos favoritos con nuestro Color Unidos, el aliado indispensable en la cocina para resaltar la presentación de arroces, guisos y sancochos y encuentralo en nuestras 3 presentaciones de 20g, 60g y 100g."
+  },
+  {
+    "id": 87,
+    "name": "Color Cúrcuma Unidos x20g",
+    "image": "productos/colorcurcumaunidosx20.png",
+    "category": "Condimentos",
+    "description": "Aporta un color dorado vibrante y un sabor terroso único a tus platos con nuestra cúrcuma molida de alta calidad, el ingrediente secreto para realzar arroces, sopas y guisos."
+  }
+  ,
+  {
+    "id": 88,
+    "name": "Canela Molida Unidos x10g",
+    "image": "productos/canelamolidax10.png",
+    "category": "Condimentos",
+    "description": "La especia indispensable en tu cocina para equilibrar sabores dulces y salados; nuestra canela molida garantiza un aroma penetrante y una textura fina que se integra perfectamente en cualquier receta."
+  },
+  {
+    "id": 89,
+    "name": "Canela Extralarga Unidos x30g",
+    "image": "productos/canelalargax30.png",
+    "category": "Condimentos",
+    "description": "Seleccionamos las mejores astillas de canela en su presentación extralarga para conservar toda su frescura, brindando un aroma intenso y un sabor profundo a tus infusiones y recetas tradicionales."
   }
   
 ]
