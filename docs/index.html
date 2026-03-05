@@ -656,23 +656,29 @@
                     }
                 }
 
-                function showCategory(cat){
-                    const titleEl = document.getElementById('category-title');
-                    if (!cat || cat === 'All') { 
-                        renderProducts(allProducts);
-                        if (titleEl) titleEl.style.display = 'none';
-                        return; 
-                    }
-                    
-                    // Mostrar el título de la categoría
-                    if (titleEl) {
-                        titleEl.textContent = cat.toUpperCase();
-                        titleEl.style.display = 'block';
-                    }
-                    
-                    const filtered = allProducts.filter(p => String(p.category).toLowerCase() === String(cat).toLowerCase());
-                    renderProducts(filtered);
-                }
+              function showCategory(cat){
+    const titleEl = document.getElementById('category-title');
+    if (!cat || cat === 'All') { 
+        // Ordenar productos alfabéticamente por nombre
+        const sortedProducts = [...allProducts].sort((a, b) => {
+            const nameA = String(a.name || '').toLowerCase();
+            const nameB = String(b.name || '').toLowerCase();
+            return nameA.localeCompare(nameB);
+        });
+        renderProducts(sortedProducts);
+        if (titleEl) titleEl.style.display = 'none';
+        return; 
+    }
+    
+    // Mostrar el título de la categoría
+    if (titleEl) {
+        titleEl.textContent = cat.toUpperCase();
+        titleEl.style.display = 'block';
+    }
+    
+    const filtered = allProducts.filter(p => String(p.category).toLowerCase() === String(cat).toLowerCase());
+    renderProducts(filtered);
+}
 
                 
                 function initNavFilters(){
