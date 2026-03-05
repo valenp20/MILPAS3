@@ -677,13 +677,9 @@
     }
     
     // Filtrar y ordenar alfabéticamente
-    const filtered = allProducts.filter(p => String(p.category).toLowerCase() === String(cat).toLowerCase());
-    const sortedFiltered = [...filtered].sort((a, b) => {
-        const nameA = String(a.name || '').toLowerCase();
-        const nameB = String(b.name || '').toLowerCase();
-        return nameA.localeCompare(nameB);
-    });
-    renderProducts(sortedFiltered);
+  const filtered = allProducts.filter(p => String(p.category).toLowerCase() === String(cat).toLowerCase());
+const sortedFiltered = [...filtered].sort((a, b) => String(a.name || '').toLowerCase().localeCompare(String(b.name || '').toLowerCase()));
+renderProducts(sortedFiltered);
 }
 
                 
