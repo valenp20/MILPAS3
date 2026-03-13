@@ -1,0 +1,33 @@
+name: Compress Images on Push
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  compress:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Compress Images
+        uses: calibre/image-actions@main
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          quality: 0.85
+          compress_png: true
+          compress_jpg: true
+
+      - name: Commit changes
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          if git diff --quiet; then
+            echo "No changes detected"
+          else
+            git add .
+            git commit -m "🖼️ Optimize images - reduce file size"
+            git push
+          fi
