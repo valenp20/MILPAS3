@@ -66,7 +66,7 @@
     "name": "Margarina Unidos Edicion Especial x1000gr ",
     "image": "productos/margarina_edicionespecialx1000gr.png",
     "category": "Aceites y Untables",
-    "description": "Descubre el sabor superior de nuestra Edición Especial: una margarina de 100g con cremosidad única y el toque de sal ideal para tus momentos gourmet."
+    "description": "Descubre el sabor superior de nuestra Edición Especial: una margarina de 1000g con cremosidad única y el toque de sal ideal para tus momentos gourmet."
  
   },
   {
@@ -566,13 +566,6 @@
     "image": "productos/jabonmanosx2000.png",
     "category": "Aseo Personal",
     "description": "Disfruta de una limpieza profunda con el delicioso y vibrante aroma a frutos rojos, dejando tus manos suaves, frescas y delicadamente perfumadas en cada lavado."
-  },
-  {
-    "id": 78,
-    "name": "Jabón Líquido Frutos rojos x2000ml",
-    "image": "productos/jabonunidosx2000.png",
-    "category": "Aseo Personal",
-    "description": "La presentación ideal de 2000ml diseñada para el cuidado de toda la familia, ofreciendo la mejor relación entre calidad y ahorro para el bienestar de tu hogar."
   },
   {
     "id": 79,
